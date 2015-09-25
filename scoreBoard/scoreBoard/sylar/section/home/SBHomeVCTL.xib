@@ -14,20 +14,42 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUm-3v-H43">
-                    <rect key="frame" x="152" y="323" width="71" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_panda" translatesAutoresizingMaskIntoConstraints="NO" id="Oal-6j-DBv">
+                    <rect key="frame" x="98" y="60" width="180" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="PQ3-8Y-ev8"/>
+                        <constraint firstAttribute="width" constant="180" id="m7X-Zy-wXc"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-2p-SQ2">
+                    <rect key="frame" x="172" y="320" width="30" height="30"/>
+                    <state key="normal" title="继续"/>
+                    <connections>
+                        <action selector="btnContinue:" destination="-1" eventType="touchUpInside" id="VIb-YK-IKa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-8s-xkj">
+                    <rect key="frame" x="158" y="420" width="60" height="30"/>
+                    <state key="normal" title="重新开始"/>
+                    <connections>
+                        <action selector="btnRestart:" destination="-1" eventType="touchUpInside" id="tFN-A3-OgU"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="LUm-3v-H43" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4rw-i0-OAY"/>
-                <constraint firstItem="LUm-3v-H43" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gpR-zW-LIU"/>
+                <constraint firstItem="vw7-8s-xkj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9xV-M8-Xhs"/>
+                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="top" secondItem="Oal-6j-DBv" secondAttribute="bottom" constant="80" id="CPF-be-s3a"/>
+                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MiJ-NX-VQi"/>
+                <constraint firstItem="Oal-6j-DBv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="VAW-cs-6Jm"/>
+                <constraint firstItem="vw7-8s-xkj" firstAttribute="top" secondItem="1Lh-2p-SQ2" secondAttribute="bottom" constant="70" id="XEl-uK-Z4y"/>
+                <constraint firstItem="Oal-6j-DBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iip-4O-Nd2"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="450.5" y="397.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="img_panda" width="360" height="360"/>
+    </resources>
 </document>

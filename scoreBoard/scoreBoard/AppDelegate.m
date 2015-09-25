@@ -21,6 +21,7 @@
     
     SBHomeVCTL *hh = [[SBHomeVCTL alloc] initWithNibName:nil bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:hh];
+    [nav setNavigationBarHidden:YES];
     _window.rootViewController = nav;
     [_window addSubview:nav.view];
     [_window makeKeyAndVisible];

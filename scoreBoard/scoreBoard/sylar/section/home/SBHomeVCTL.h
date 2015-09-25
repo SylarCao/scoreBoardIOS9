@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SBBasicVCTL.h"
 
-@interface SBHomeVCTL : UIViewController
+@interface SBHomeVCTL : SBBasicVCTL
 
 @end

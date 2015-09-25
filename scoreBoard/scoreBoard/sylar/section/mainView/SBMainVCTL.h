@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  SBMainVCTL.h
 //  scoreBoard
 //
-//  Created by sylar on 15/9/24.
+//  Created by sylar on 15/9/25.
 //  Copyright © 2015年 sylar. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SBMainVCTL : UIViewController
 
 @end
-
