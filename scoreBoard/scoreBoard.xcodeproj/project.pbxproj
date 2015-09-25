@@ -218,6 +218,7 @@
 		2C89BA8E1BB51AB200685F4B /* mainView */ = {
 			isa = PBXGroup;
 			children = (
+				2CADEA271BB52F2A009BBD28 /* addScore */,
 				2C89BA8F1BB51AB200685F4B /* SBMainVCTL.h */,
 				2C89BA901BB51AB200685F4B /* SBMainVCTL.m */,
 				2C89BA911BB51AB200685F4B /* SBMainVCTL.xib */,
@@ -229,6 +230,13 @@
 				2C89BAAE1BB52CF900685F4B /* SBMainViewHeader.xib */,
 			);
 			path = mainView;
+			sourceTree = "<group>";
+		};
+		2CADEA271BB52F2A009BBD28 /* addScore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = addScore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

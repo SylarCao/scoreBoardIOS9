@@ -7,6 +7,7 @@
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "SBHomeVCTL.h"
+#import "SBMainVCTL.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBHomeVCTL ()
 
@@ -22,7 +23,8 @@
 
 - (IBAction)btnRestart:(id)sender
 {
-    
+    SBMainVCTL *mm = [[SBMainVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:mm animated:YES];
 }
 
 - (IBAction)btnContinue:(id)sender

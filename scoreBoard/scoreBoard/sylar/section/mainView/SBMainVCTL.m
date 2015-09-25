@@ -10,12 +10,14 @@
 #import "SBData.h"
 #import "SBMainViewCell.h"
 #import "SBMainViewHeader.h"
+#import "SBCommonDefine.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBMainVCTL ()
 <UITableViewDataSource, UITableViewDelegate>
 
-
 @property (nonatomic, weak) IBOutlet UITableView *table;
+
+
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -28,19 +30,39 @@
     [_table registerNib:[UINib nibWithNibName:@"SBMainViewHeader" bundle:nil] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
 }
 
-
-
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 0;
+    return 60;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    SBMainViewCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBMainViewCell getCellId] forIndexPath:indexPath];
+    
+    
+    return rt;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat rt = kSBMainViewCellHeight;
+    return rt;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    CGFloat rt = kSBMainViewHeaderHeight;
+    return rt;
+}
+
+- (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView *rt = [tableView dequeueReusableHeaderFooterViewWithIdentifier:[SBMainViewHeader getHeaderId]];
+    
+    
+    return rt;
+}
 
 
 @end

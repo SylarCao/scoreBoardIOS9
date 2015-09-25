@@ -15,7 +15,9 @@
 
 
 
-# define kSBMainViewLineNumberWidth    (60)
+# define kSBMainViewLineNumberWidth    (40)
+# define kSBMainViewCellHeight         (30)
+# define kSBMainViewHeaderHeight       (50)
 
 // main view color
 # define kSBMainViewLineNumberBKGColor  ([SBCommonDefine share].mainViewLineNumberBkgColor)
