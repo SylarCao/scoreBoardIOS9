@@ -12,7 +12,6 @@
 @interface SBData()
 
 
-
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBData
@@ -34,14 +33,16 @@
     {
         _currentPlayers = [[NSMutableArray alloc] init];
         _games = [[NSMutableArray alloc] init];
+        [self addFackData1];
     }
     return self;
 }
 
 - (void) addPlayer:(NSString *)playerName
 {
-    NSInteger uid = [_currentPlayers count];
-    SBPerson *person = [[SBPerson alloc] initWithPlayerUid:uid playerNmae:playerName];
+    SBPerson *last_person = [_currentPlayers lastObject];
+    NSInteger uid = last_person.uid;
+    SBPerson *person = [[SBPerson alloc] initWithPlayerUid:(uid+1) playerNmae:playerName];
     [_currentPlayers addObject:person];
 }
 
@@ -58,6 +59,28 @@
     
     return rt;
 }
+
+- (void) removePlayer:(NSInteger)playerUid
+{
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        if (each_person.uid == playerUid)
+        {
+            [_currentPlayers removeObject:each_person];
+            break;
+        }
+    }
+}
+
+#pragma mark - test
+- (void) addFackData1
+{
+    [self addPlayer:@"player1"];
+    [self addPlayer:@"player2"];
+    [self addPlayer:@"player3"];
+    [self addPlayer:@"player4"];
+}
+
 
 
 @end

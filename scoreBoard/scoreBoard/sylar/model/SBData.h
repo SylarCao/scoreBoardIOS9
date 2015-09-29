@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "SBGame.h"
+#import "SBPerson.h"
 
 @interface SBData : NSObject
 
@@ -37,6 +38,13 @@
  *  @param gameType <#gameType description#>
  */
 - (void) addGameWithScore:(NSDictionary *)scores type:(SBGameScoreType)gameType;
+
+/**
+ *  remove the person uid == uid
+ *
+ *  @param playerUid <#playerUid description#>
+ */
+- (void) removePlayer:(NSInteger)playerUid;
 
 
 

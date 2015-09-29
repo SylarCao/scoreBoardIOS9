@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBAddPlayerVCTL">
+            <connections>
+                <outlet property="btnAddPlayer" destination="WBr-EK-goj" id="QYa-Ma-mvz"/>
+                <outlet property="btnDone" destination="nWb-nb-J5O" id="VdA-Ph-aKc"/>
+                <outlet property="table" destination="BnX-kt-tDG" id="BNa-ZD-AAw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BnX-kt-tDG">
+                    <rect key="frame" x="0.0" y="40" width="320" height="270"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wK1-vl-gDN"/>
+                        <outlet property="delegate" destination="-1" id="C9g-Tr-6Mw"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nWb-nb-J5O">
+                    <rect key="frame" x="20" y="420" width="280" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="5fH-H5-pUY"/>
+                    </constraints>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnDone:" destination="-1" eventType="touchUpInside" id="smk-Z2-R4H"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WBr-EK-goj">
+                    <rect key="frame" x="20" y="330" width="280" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="o42-Pd-r2Q"/>
+                    </constraints>
+                    <state key="normal" title="添加玩家">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnAddPlayer:" destination="-1" eventType="touchUpInside" id="fgd-hv-39y"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="nWb-nb-J5O" firstAttribute="top" secondItem="WBr-EK-goj" secondAttribute="bottom" constant="30" id="8LO-ey-ojV"/>
+                <constraint firstItem="BnX-kt-tDG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="94s-B1-huL"/>
+                <constraint firstAttribute="bottom" secondItem="nWb-nb-J5O" secondAttribute="bottom" constant="20" id="FAr-lp-2cG"/>
+                <constraint firstAttribute="trailing" secondItem="BnX-kt-tDG" secondAttribute="trailing" id="Lpv-BL-zcp"/>
+                <constraint firstItem="BnX-kt-tDG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="V4G-vX-ZZ7"/>
+                <constraint firstItem="WBr-EK-goj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Vjr-cO-n7K"/>
+                <constraint firstItem="WBr-EK-goj" firstAttribute="top" secondItem="BnX-kt-tDG" secondAttribute="bottom" constant="20" id="XTz-R8-xot"/>
+                <constraint firstItem="nWb-nb-J5O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="fuQ-oY-9ht"/>
+                <constraint firstAttribute="trailing" secondItem="nWb-nb-J5O" secondAttribute="trailing" constant="20" id="wXa-Xk-CNB"/>
+                <constraint firstAttribute="trailing" secondItem="WBr-EK-goj" secondAttribute="trailing" constant="20" id="xwt-JF-oiW"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="499" y="296"/>
+        </view>
+    </objects>
+</document>

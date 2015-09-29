@@ -11,12 +11,15 @@
 #import "SBMainViewCell.h"
 #import "SBMainViewHeader.h"
 #import "SBCommonDefine.h"
+#import "SBAddPlayerVCTL.h"
+#import "SBAddScoreVCTL.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBMainVCTL ()
-<UITableViewDataSource, UITableViewDelegate>
+<UITableViewDataSource, UITableViewDelegate,
+SBMainViewHeaderDelegate,
+SBAddPlayerVCTLDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *table;
-
 
 
 @end
@@ -27,7 +30,8 @@
     [super viewDidLoad];
     
     [_table registerNib:[UINib nibWithNibName:@"SBMainViewCell" bundle:nil] forCellReuseIdentifier:[SBMainViewCell getCellId]];
-    [_table registerNib:[UINib nibWithNibName:@"SBMainViewHeader" bundle:nil] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
+//    [_table registerNib:[UINib nibWithNibName:@"SBMainViewHeader" bundle:nil] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
+    [_table registerClass:[SBMainViewHeader class] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
 }
 
 #pragma mark - table view delegate
@@ -58,11 +62,31 @@
 
 - (nullable UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UITableViewHeaderFooterView *rt = [tableView dequeueReusableHeaderFooterViewWithIdentifier:[SBMainViewHeader getHeaderId]];
-    
-    
+    SBMainViewHeader *rt = [tableView dequeueReusableHeaderFooterViewWithIdentifier:[SBMainViewHeader getHeaderId]];
+    rt.delegate = self;
+    [rt refresh];
     return rt;
 }
 
+
+#pragma mark - SBAddPlayerVCTLDelegate
+- (void) SBAddPlayerVCTLDidTapOK
+{
+    [_table reloadData];
+}
+
+
+#pragma mark - SBMainViewHeaderDelegate
+- (void) SBMainViewHeaderDidLongpressAddBtn
+{
+    SBAddPlayerVCTL *add_palyer = [[SBAddPlayerVCTL alloc] initWithNibName:nil bundle:nil];
+    add_palyer.delegate = self;
+    [self.navigationController pushViewController:add_palyer animated:YES];
+}
+
+- (void) SBMainViewHeaderDidTapAddBtn
+{
+    
+}
 
 @end

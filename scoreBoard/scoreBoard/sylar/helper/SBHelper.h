@@ -18,5 +18,18 @@
  */
 + (instancetype) share;
 
+/**
+ *  set the button to the green type
+ *
+ *  @param btn the target button
+ */
+- (void) greenButton:(UIButton *)btn;
+
+/**
+ *  get random color
+ *
+ *  @return <#return value description#>
+ */
+- (UIColor *) getRandomColor;
 
 @end

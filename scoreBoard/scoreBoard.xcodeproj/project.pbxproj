@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C08A8411BB934940077FE53 /* SBAddPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A8401BB934940077FE53 /* SBAddPlayerView.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8431BB934A10077FE53 /* SBAddPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C08A8421BB934A10077FE53 /* SBAddPlayerView.xib */; settings = {ASSET_TAGS = (); }; };
+		2C08A8521BB9366F0077FE53 /* LewPopupBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A8461BB9366F0077FE53 /* LewPopupBackgroundView.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A8481BB9366F0077FE53 /* LewPopupViewAnimationDrop.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8541BB9366F0077FE53 /* LewPopupViewAnimationFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A84A1BB9366F0077FE53 /* LewPopupViewAnimationFade.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8551BB9366F0077FE53 /* LewPopupViewAnimationSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A84C1BB9366F0077FE53 /* LewPopupViewAnimationSlide.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8561BB9366F0077FE53 /* LewPopupViewAnimationSpring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A84E1BB9366F0077FE53 /* LewPopupViewAnimationSpring.m */; settings = {ASSET_TAGS = (); }; };
+		2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A8511BB9366F0077FE53 /* UIViewController+LewPopupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83CA1BB8E4F800A335B5 /* SBAddPlayerVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83C81BB8E4F800A335B5 /* SBAddPlayerVCTL.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83CB1BB8E4F800A335B5 /* SBAddPlayerVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A83C91BB8E4F800A335B5 /* SBAddPlayerVCTL.xib */; settings = {ASSET_TAGS = (); }; };
+		2C3A83D01BB8E6BC00A335B5 /* SBAddScoreVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83CE1BB8E6BC00A335B5 /* SBAddScoreVCTL.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83D11BB8E6BC00A335B5 /* SBAddScoreVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A83CF1BB8E6BC00A335B5 /* SBAddScoreVCTL.xib */; settings = {ASSET_TAGS = (); }; };
+		2C3A83F11BB9053200A335B5 /* MGSwipeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83EE1BB9053200A335B5 /* MGSwipeButton.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83F21BB9053200A335B5 /* MGSwipeTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83F01BB9053200A335B5 /* MGSwipeTableCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83F91BB905EC00A335B5 /* SBAddPlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83F71BB905EC00A335B5 /* SBAddPlayerCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C3A83FA1BB905EC00A335B5 /* SBAddPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C3A83F81BB905EC00A335B5 /* SBAddPlayerCell.xib */; settings = {ASSET_TAGS = (); }; };
 		2C65D6DD1BB38F5C00D22F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65D6DC1BB38F5C00D22F29 /* main.m */; };
 		2C65D6E01BB38F5C00D22F29 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C65D6DF1BB38F5C00D22F29 /* AppDelegate.m */; };
 		2C65D6E81BB38F5C00D22F29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C65D6E71BB38F5C00D22F29 /* Assets.xcassets */; };
@@ -32,10 +48,39 @@
 		2C89BAA71BB5243F00685F4B /* SBBasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA61BB5243F00685F4B /* SBBasicTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA91BB524C300685F4B /* SBCommonDefine.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */; settings = {ASSET_TAGS = (); }; };
-		2C89BAAF1BB52CF900685F4B /* SBMainViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C89BAAE1BB52CF900685F4B /* SBMainViewHeader.xib */; settings = {ASSET_TAGS = (); }; };
+		2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE329C41BBA3729008259DD /* UITextField+Shake.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C08A83F1BB934940077FE53 /* SBAddPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddPlayerView.h; sourceTree = "<group>"; };
+		2C08A8401BB934940077FE53 /* SBAddPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddPlayerView.m; sourceTree = "<group>"; };
+		2C08A8421BB934A10077FE53 /* SBAddPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAddPlayerView.xib; sourceTree = "<group>"; };
+		2C08A8451BB9366F0077FE53 /* LewPopupBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupBackgroundView.h; sourceTree = "<group>"; };
+		2C08A8461BB9366F0077FE53 /* LewPopupBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LewPopupBackgroundView.m; sourceTree = "<group>"; };
+		2C08A8471BB9366F0077FE53 /* LewPopupViewAnimationDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewAnimationDrop.h; sourceTree = "<group>"; };
+		2C08A8481BB9366F0077FE53 /* LewPopupViewAnimationDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LewPopupViewAnimationDrop.m; sourceTree = "<group>"; };
+		2C08A8491BB9366F0077FE53 /* LewPopupViewAnimationFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewAnimationFade.h; sourceTree = "<group>"; };
+		2C08A84A1BB9366F0077FE53 /* LewPopupViewAnimationFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LewPopupViewAnimationFade.m; sourceTree = "<group>"; };
+		2C08A84B1BB9366F0077FE53 /* LewPopupViewAnimationSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewAnimationSlide.h; sourceTree = "<group>"; };
+		2C08A84C1BB9366F0077FE53 /* LewPopupViewAnimationSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LewPopupViewAnimationSlide.m; sourceTree = "<group>"; };
+		2C08A84D1BB9366F0077FE53 /* LewPopupViewAnimationSpring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewAnimationSpring.h; sourceTree = "<group>"; };
+		2C08A84E1BB9366F0077FE53 /* LewPopupViewAnimationSpring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LewPopupViewAnimationSpring.m; sourceTree = "<group>"; };
+		2C08A84F1BB9366F0077FE53 /* LewPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewController.h; sourceTree = "<group>"; };
+		2C08A8501BB9366F0077FE53 /* UIViewController+LewPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LewPopupViewController.h"; sourceTree = "<group>"; };
+		2C08A8511BB9366F0077FE53 /* UIViewController+LewPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LewPopupViewController.m"; sourceTree = "<group>"; };
+		2C3A83C71BB8E4F800A335B5 /* SBAddPlayerVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddPlayerVCTL.h; sourceTree = "<group>"; };
+		2C3A83C81BB8E4F800A335B5 /* SBAddPlayerVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddPlayerVCTL.m; sourceTree = "<group>"; };
+		2C3A83C91BB8E4F800A335B5 /* SBAddPlayerVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAddPlayerVCTL.xib; sourceTree = "<group>"; };
+		2C3A83CD1BB8E6BC00A335B5 /* SBAddScoreVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreVCTL.h; sourceTree = "<group>"; };
+		2C3A83CE1BB8E6BC00A335B5 /* SBAddScoreVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreVCTL.m; sourceTree = "<group>"; };
+		2C3A83CF1BB8E6BC00A335B5 /* SBAddScoreVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAddScoreVCTL.xib; sourceTree = "<group>"; };
+		2C3A83ED1BB9053200A335B5 /* MGSwipeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeButton.h; sourceTree = "<group>"; };
+		2C3A83EE1BB9053200A335B5 /* MGSwipeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeButton.m; sourceTree = "<group>"; };
+		2C3A83EF1BB9053200A335B5 /* MGSwipeTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSwipeTableCell.h; sourceTree = "<group>"; };
+		2C3A83F01BB9053200A335B5 /* MGSwipeTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSwipeTableCell.m; sourceTree = "<group>"; };
+		2C3A83F61BB905EC00A335B5 /* SBAddPlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddPlayerCell.h; sourceTree = "<group>"; };
+		2C3A83F71BB905EC00A335B5 /* SBAddPlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddPlayerCell.m; sourceTree = "<group>"; };
+		2C3A83F81BB905EC00A335B5 /* SBAddPlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAddPlayerCell.xib; sourceTree = "<group>"; };
 		2C65D6D81BB38F5C00D22F29 /* scoreBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scoreBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C65D6DC1BB38F5C00D22F29 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C65D6DE1BB38F5C00D22F29 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -75,7 +120,8 @@
 		2C89BAA91BB524C300685F4B /* SBCommonDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCommonDefine.m; sourceTree = "<group>"; };
 		2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewHeader.h; sourceTree = "<group>"; };
 		2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewHeader.m; sourceTree = "<group>"; };
-		2C89BAAE1BB52CF900685F4B /* SBMainViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBMainViewHeader.xib; sourceTree = "<group>"; };
+		2CE329C31BBA3729008259DD /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
+		2CE329C41BBA3729008259DD /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +135,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C08A8441BB9366F0077FE53 /* LewPopupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C08A8451BB9366F0077FE53 /* LewPopupBackgroundView.h */,
+				2C08A8461BB9366F0077FE53 /* LewPopupBackgroundView.m */,
+				2C08A8471BB9366F0077FE53 /* LewPopupViewAnimationDrop.h */,
+				2C08A8481BB9366F0077FE53 /* LewPopupViewAnimationDrop.m */,
+				2C08A8491BB9366F0077FE53 /* LewPopupViewAnimationFade.h */,
+				2C08A84A1BB9366F0077FE53 /* LewPopupViewAnimationFade.m */,
+				2C08A84B1BB9366F0077FE53 /* LewPopupViewAnimationSlide.h */,
+				2C08A84C1BB9366F0077FE53 /* LewPopupViewAnimationSlide.m */,
+				2C08A84D1BB9366F0077FE53 /* LewPopupViewAnimationSpring.h */,
+				2C08A84E1BB9366F0077FE53 /* LewPopupViewAnimationSpring.m */,
+				2C08A84F1BB9366F0077FE53 /* LewPopupViewController.h */,
+				2C08A8501BB9366F0077FE53 /* UIViewController+LewPopupViewController.h */,
+				2C08A8511BB9366F0077FE53 /* UIViewController+LewPopupViewController.m */,
+			);
+			path = LewPopupViewController;
+			sourceTree = "<group>";
+		};
+		2C3A83C61BB8E4E700A335B5 /* addPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A83C71BB8E4F800A335B5 /* SBAddPlayerVCTL.h */,
+				2C3A83C81BB8E4F800A335B5 /* SBAddPlayerVCTL.m */,
+				2C3A83C91BB8E4F800A335B5 /* SBAddPlayerVCTL.xib */,
+				2C3A83F61BB905EC00A335B5 /* SBAddPlayerCell.h */,
+				2C3A83F71BB905EC00A335B5 /* SBAddPlayerCell.m */,
+				2C3A83F81BB905EC00A335B5 /* SBAddPlayerCell.xib */,
+				2C08A83F1BB934940077FE53 /* SBAddPlayerView.h */,
+				2C08A8401BB934940077FE53 /* SBAddPlayerView.m */,
+				2C08A8421BB934A10077FE53 /* SBAddPlayerView.xib */,
+			);
+			path = addPlayer;
+			sourceTree = "<group>";
+		};
+		2C3A83EB1BB9053200A335B5 /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2CE329C21BBA3729008259DD /* textField_shake */,
+				2C08A8441BB9366F0077FE53 /* LewPopupViewController */,
+				2C3A83EC1BB9053200A335B5 /* MGSwipeTableCell */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		2C3A83EC1BB9053200A335B5 /* MGSwipeTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				2C3A83ED1BB9053200A335B5 /* MGSwipeButton.h */,
+				2C3A83EE1BB9053200A335B5 /* MGSwipeButton.m */,
+				2C3A83EF1BB9053200A335B5 /* MGSwipeTableCell.h */,
+				2C3A83F01BB9053200A335B5 /* MGSwipeTableCell.m */,
+			);
+			path = MGSwipeTableCell;
+			sourceTree = "<group>";
+		};
 		2C65D6CF1BB38F5C00D22F29 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +235,7 @@
 				2C65D7151BB39D9B00D22F29 /* section */,
 				2C89BA871BB51A7700685F4B /* helper */,
 				2C89BA881BB51A7700685F4B /* model */,
+				2C3A83EB1BB9053200A335B5 /* vendor */,
 				2C65D7141BB39D9B00D22F29 /* resource */,
 			);
 			path = sylar;
@@ -218,6 +322,7 @@
 		2C89BA8E1BB51AB200685F4B /* mainView */ = {
 			isa = PBXGroup;
 			children = (
+				2C3A83C61BB8E4E700A335B5 /* addPlayer */,
 				2CADEA271BB52F2A009BBD28 /* addScore */,
 				2C89BA8F1BB51AB200685F4B /* SBMainVCTL.h */,
 				2C89BA901BB51AB200685F4B /* SBMainVCTL.m */,
@@ -227,7 +332,6 @@
 				2C89BAA21BB5241E00685F4B /* SBMainViewCell.xib */,
 				2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */,
 				2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */,
-				2C89BAAE1BB52CF900685F4B /* SBMainViewHeader.xib */,
 			);
 			path = mainView;
 			sourceTree = "<group>";
@@ -235,8 +339,20 @@
 		2CADEA271BB52F2A009BBD28 /* addScore */ = {
 			isa = PBXGroup;
 			children = (
+				2C3A83CD1BB8E6BC00A335B5 /* SBAddScoreVCTL.h */,
+				2C3A83CE1BB8E6BC00A335B5 /* SBAddScoreVCTL.m */,
+				2C3A83CF1BB8E6BC00A335B5 /* SBAddScoreVCTL.xib */,
 			);
 			path = addScore;
+			sourceTree = "<group>";
+		};
+		2CE329C21BBA3729008259DD /* textField_shake */ = {
+			isa = PBXGroup;
+			children = (
+				2CE329C31BBA3729008259DD /* UITextField+Shake.h */,
+				2CE329C41BBA3729008259DD /* UITextField+Shake.m */,
+			);
+			path = textField_shake;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,10 +417,13 @@
 				2C65D72C1BB39E4100D22F29 /* icon_29.png in Resources */,
 				2C65D6E81BB38F5C00D22F29 /* Assets.xcassets in Resources */,
 				2C65D72B1BB39E4100D22F29 /* icon_152.png in Resources */,
-				2C89BAAF1BB52CF900685F4B /* SBMainViewHeader.xib in Resources */,
+				2C3A83CB1BB8E4F800A335B5 /* SBAddPlayerVCTL.xib in Resources */,
 				2C65D72D1BB39E4100D22F29 /* icon_40.png in Resources */,
+				2C3A83D11BB8E6BC00A335B5 /* SBAddScoreVCTL.xib in Resources */,
 				2C65D71F1BB39DCE00D22F29 /* SBHomeVCTL.xib in Resources */,
 				2C65D7291BB39E4100D22F29 /* 11519e91feb69ea389a9fc8ec5e2a61d_256_256.png in Resources */,
+				2C3A83FA1BB905EC00A335B5 /* SBAddPlayerCell.xib in Resources */,
+				2C08A8431BB934A10077FE53 /* SBAddPlayerView.xib in Resources */,
 				2C65D72F1BB39E4100D22F29 /* icon_76.png in Resources */,
 				2C65D72E1BB39E4100D22F29 /* icon_58.png in Resources */,
 				2C65D72A1BB39E4100D22F29 /* icon_120.png in Resources */,
@@ -321,17 +440,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */,
+				2C08A8541BB9366F0077FE53 /* LewPopupViewAnimationFade.m in Sources */,
 				2C89BA961BB51ACF00685F4B /* SBData.m in Sources */,
+				2C3A83F11BB9053200A335B5 /* MGSwipeButton.m in Sources */,
 				2C89BA9C1BB51C1100685F4B /* SBPerson.m in Sources */,
+				2C08A8551BB9366F0077FE53 /* LewPopupViewAnimationSlide.m in Sources */,
+				2C3A83D01BB8E6BC00A335B5 /* SBAddScoreVCTL.m in Sources */,
 				2C89BA921BB51AB200685F4B /* SBMainVCTL.m in Sources */,
+				2C08A8521BB9366F0077FE53 /* LewPopupBackgroundView.m in Sources */,
 				2C65D71A1BB39DBF00D22F29 /* SBBasicVCTL.m in Sources */,
+				2C08A8561BB9366F0077FE53 /* LewPopupViewAnimationSpring.m in Sources */,
 				2C89BAA31BB5241E00685F4B /* SBMainViewCell.m in Sources */,
+				2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */,
 				2C65D71E1BB39DCE00D22F29 /* SBHomeVCTL.m in Sources */,
 				2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */,
 				2C89BA991BB51ADF00685F4B /* SBHelper.m in Sources */,
 				2C65D6E01BB38F5C00D22F29 /* AppDelegate.m in Sources */,
+				2C3A83CA1BB8E4F800A335B5 /* SBAddPlayerVCTL.m in Sources */,
+				2C3A83F91BB905EC00A335B5 /* SBAddPlayerCell.m in Sources */,
 				2C89BA9F1BB51C4D00685F4B /* SBGame.m in Sources */,
 				2C65D6DD1BB38F5C00D22F29 /* main.m in Sources */,
+				2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */,
+				2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */,
+				2C08A8411BB934940077FE53 /* SBAddPlayerView.m in Sources */,
+				2C3A83F21BB9053200A335B5 /* MGSwipeTableCell.m in Sources */,
 				2C89BAA71BB5243F00685F4B /* SBBasicTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

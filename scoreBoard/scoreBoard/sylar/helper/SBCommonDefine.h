@@ -17,7 +17,14 @@
 
 # define kSBMainViewLineNumberWidth    (40)
 # define kSBMainViewCellHeight         (30)
-# define kSBMainViewHeaderHeight       (50)
+# define kSBMainViewHeaderHeight       (40)
+
+// common
+# define kSBStatusBarBkgColor     (RGBCOLOR(232, 232, 232))
+# define kSBAnimationTimeDefault  (0.2)
+# define kScreenWidth             ([SBCommonDefine share].screenWidth)
+# define kScreenHeight            ([SBCommonDefine share].screenHeight)
+
 
 // main view color
 # define kSBMainViewLineNumberBKGColor  ([SBCommonDefine share].mainViewLineNumberBkgColor)
@@ -39,6 +46,8 @@
 @property (nonatomic, strong) UIColor *mainViewScoreBkgColor2;
 @property (nonatomic, strong) UIColor *mainViewScoreColor;
 
+@property (nonatomic, assign) CGFloat screenWidth;
+@property (nonatomic, assign) CGFloat screenHeight;
 
 
 + (instancetype) share;

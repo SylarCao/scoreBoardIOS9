@@ -5,14 +5,14 @@
 //  Created by sylar on 15/9/24.
 //  Copyright © 2015年 sylar. All rights reserved.
 //
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "AppDelegate.h"
 #import "SBHomeVCTL.h"
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AppDelegate ()
 
 @end
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation AppDelegate
 
 
@@ -21,7 +21,7 @@
     
     SBHomeVCTL *hh = [[SBHomeVCTL alloc] initWithNibName:nil bundle:nil];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:hh];
-    [nav setNavigationBarHidden:YES];
+    nav.navigationBar.hidden = YES;
     _window.rootViewController = nav;
     [_window addSubview:nav.view];
     [_window makeKeyAndVisible];
