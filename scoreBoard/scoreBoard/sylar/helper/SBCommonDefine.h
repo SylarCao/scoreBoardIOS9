@@ -34,6 +34,11 @@
 # define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)
 
 
+// add score view controller
+# define kSBAddScoreVCTLMinCellHeight  (40)
+
+
+
 
 
 

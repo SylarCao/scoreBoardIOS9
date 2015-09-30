@@ -86,7 +86,8 @@ SBAddPlayerVCTLDelegate>
 
 - (void) SBMainViewHeaderDidTapAddBtn
 {
-    
+    SBAddScoreVCTL *add_score = [[SBAddScoreVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:add_score animated:YES];
 }
 
 @end

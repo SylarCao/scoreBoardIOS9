@@ -17,6 +17,7 @@
     {
         _uid = uid;
         _name = playerName;
+        _score = [[NSMutableArray alloc] init];
     }
     return self;
 }

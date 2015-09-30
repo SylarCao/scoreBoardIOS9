@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) NSInteger uid;
 @property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSMutableArray *score;
 
 /**
  *  init
