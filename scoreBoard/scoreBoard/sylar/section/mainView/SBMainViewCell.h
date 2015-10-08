@@ -11,6 +11,11 @@
 
 @interface SBMainViewCell : SBBasicTableViewCell
 
-
+/**
+ *  score array
+ *
+ *  @param score <#score description#>
+ */
+- (void) cellUpdateWithScores:(NSArray *)score;
 
 @end

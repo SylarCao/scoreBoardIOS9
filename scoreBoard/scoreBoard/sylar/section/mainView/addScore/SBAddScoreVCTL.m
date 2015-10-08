@@ -10,6 +10,7 @@
 #import "SBAddScoreCell.h"
 #import "SBData.h"
 #import "SBHelper.h"
+#import "SBAddScoreTempModule.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBAddScoreVCTL ()
 <UITableViewDataSource, UITableViewDelegate,
@@ -17,6 +18,7 @@ SBAddScoreCellDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *table;
 @property (nonatomic, weak) IBOutlet UIButton *btnDone;
+@property (nonatomic, weak) IBOutlet UIButton *btnCancel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableHeight;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableUpDistance;
 @property (nonatomic, assign) CGFloat cellHeight;
@@ -32,6 +34,9 @@ SBAddScoreCellDelegate>
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    // data model
+    [[SBAddScoreTempModule share] resetCurrentData];
+    
     // table
     [_table registerNib:[UINib nibWithNibName:@"SBAddScoreCell" bundle:nil] forCellReuseIdentifier:[SBAddScoreCell getCellId]];
     UIView *view_footer = [[UIView alloc] init];
@@ -39,6 +44,7 @@ SBAddScoreCellDelegate>
     
     // button
     [[SBHelper share] greenButton:_btnDone];
+    [[SBHelper share] greenButton:_btnCancel];
     
     // calculate cell height
     _cellHeight = 80;
@@ -62,6 +68,11 @@ SBAddScoreCellDelegate>
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)btnCancelTap:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -74,8 +85,7 @@ SBAddScoreCellDelegate>
     SBAddScoreCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBAddScoreCell getCellId] forIndexPath:indexPath];
     rt.delegate = self;
     SBPerson *person_i = [[SBData share].currentPlayers objectAtIndex:indexPath.row];
-    [rt setWithName:person_i.name];
-
+    [rt setWithPerson:person_i];
     return rt;
 }
 
@@ -97,16 +107,13 @@ SBAddScoreCellDelegate>
 
 
 #pragma mark - SBAddScoreCellDelegate
-- (void) SBAddScoreCell:(SBAddScoreCell *)cell didChangeInputText:(NSString *)text
+- (void) SBAddScoreCell:(SBAddScoreCell *)cell willChangeInputText:(NSString *)text
 {
     
 }
 
 - (void) SBAddScoreCell:(SBAddScoreCell *)cell didTapAutoCalculate:(BOOL)win
 {
-    
-    
-    
     
 }
 

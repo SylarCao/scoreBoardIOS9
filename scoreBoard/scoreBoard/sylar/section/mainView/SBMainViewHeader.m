@@ -110,7 +110,6 @@
         {
             UILabel *each_lb = [[UILabel alloc] init];
             each_lb.text = each_person.name;
-            each_lb.backgroundColor = [[SBHelper share] getRandomColor];
             [_stackViewSubViews addObject:each_lb];
             [_stackView addArrangedSubview:each_lb];
         }

@@ -22,4 +22,25 @@
     return self;
 }
 
+- (NSInteger) getTotalScore
+{
+    NSInteger rt = 0;
+    for (NSString *each_score in _score)
+    {
+        rt = rt + [each_score integerValue];
+    }
+    return rt;
+}
+
+- (NSString *) getScoreAtRound:(NSInteger)round
+{
+    NSString *rt = @"999";
+    if (round < _score.count)
+    {
+        rt = [_score objectAtIndex:round];
+    }
+    return rt;
+}
+
+
 @end

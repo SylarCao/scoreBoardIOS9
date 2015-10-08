@@ -46,6 +46,14 @@
  */
 - (void) removePlayer:(NSInteger)playerUid;
 
+/**
+ *  get score at round **
+ *
+ *  @param roundNumber <#roundNumber description#>
+ *
+ *  @return <#return value description#>
+ */
+- (NSArray *) getScoreAtRound:(NSInteger)roundNumber;
 
 
 

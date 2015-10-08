@@ -24,4 +24,20 @@
  */
 - (id) initWithPlayerUid:(NSInteger)uid playerNmae:(NSString *)playerName;
 
+/**
+ *  calculate total score
+ *
+ *  @return <#return value description#>
+ */
+- (NSInteger) getTotalScore;
+
+/**
+ *  <#Description#>
+ *
+ *  @param round <#round description#>
+ *
+ *  @return <#return value description#>
+ */
+- (NSString *) getScoreAtRound:(NSInteger)round;
+
 @end

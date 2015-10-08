@@ -30,7 +30,6 @@ SBAddPlayerVCTLDelegate>
     [super viewDidLoad];
     
     [_table registerNib:[UINib nibWithNibName:@"SBMainViewCell" bundle:nil] forCellReuseIdentifier:[SBMainViewCell getCellId]];
-//    [_table registerNib:[UINib nibWithNibName:@"SBMainViewHeader" bundle:nil] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
     [_table registerClass:[SBMainViewHeader class] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
 }
 
@@ -43,8 +42,9 @@ SBAddPlayerVCTLDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SBMainViewCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBMainViewCell getCellId] forIndexPath:indexPath];
-    
-    
+    NSInteger row = indexPath.row;
+    NSArray *score = [[SBData share] getScoreAtRound:row];
+    [rt cellUpdateWithScores:score];
     return rt;
 }
 
@@ -68,6 +68,10 @@ SBAddPlayerVCTLDelegate>
     return rt;
 }
 
+- (BOOL) tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NO;
+}
 
 #pragma mark - SBAddPlayerVCTLDelegate
 - (void) SBAddPlayerVCTLDidTapOK

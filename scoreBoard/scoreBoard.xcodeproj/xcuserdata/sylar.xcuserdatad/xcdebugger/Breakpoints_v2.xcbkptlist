@@ -164,11 +164,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "scoreBoard/sylar/section/mainView/addScore/SBAddScoreCell.m"
-            timestampString = "465294256.045573"
+            timestampString = "465980395.443659"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "-awakeFromNib"
             landmarkType = "5">
          </BreakpointContent>

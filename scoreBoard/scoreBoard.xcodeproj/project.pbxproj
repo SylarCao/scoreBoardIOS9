@@ -64,6 +64,8 @@
 		2C89BAA71BB5243F00685F4B /* SBBasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA61BB5243F00685F4B /* SBBasicTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA91BB524C300685F4B /* SBCommonDefine.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */; settings = {ASSET_TAGS = (); }; };
+		2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2CE092EC1BC6344D00027EED /* SBAddScoreTempModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */; settings = {ASSET_TAGS = (); }; };
 		2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE329C41BBA3729008259DD /* UITextField+Shake.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -169,6 +171,10 @@
 		2C89BAA91BB524C300685F4B /* SBCommonDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCommonDefine.m; sourceTree = "<group>"; };
 		2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewHeader.h; sourceTree = "<group>"; };
 		2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewHeader.m; sourceTree = "<group>"; };
+		2CE092DD1BC60ADF00027EED /* SBBasicCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBasicCollectionViewCell.h; sourceTree = "<group>"; };
+		2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBBasicCollectionViewCell.m; sourceTree = "<group>"; };
+		2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreTempModule.m; sourceTree = "<group>"; };
+		2CE092FC1BC64E0C00027EED /* SBAddScoreTempModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreTempModule.h; sourceTree = "<group>"; };
 		2CE329C31BBA3729008259DD /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
 		2CE329C41BBA3729008259DD /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -401,6 +407,8 @@
 				2C65D7191BB39DBF00D22F29 /* SBBasicVCTL.m */,
 				2C89BAA51BB5243F00685F4B /* SBBasicTableViewCell.h */,
 				2C89BAA61BB5243F00685F4B /* SBBasicTableViewCell.m */,
+				2CE092DD1BC60ADF00027EED /* SBBasicCollectionViewCell.h */,
+				2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */,
 			);
 			path = basic;
 			sourceTree = "<group>";
@@ -480,6 +488,8 @@
 				2C2B50951BBBB4BE0068C1D5 /* SBAddScoreCell.h */,
 				2C2B50961BBBB4BE0068C1D5 /* SBAddScoreCell.m */,
 				2C2B50971BBBB4BE0068C1D5 /* SBAddScoreCell.xib */,
+				2CE092FC1BC64E0C00027EED /* SBAddScoreTempModule.h */,
+				2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */,
 			);
 			path = addScore;
 			sourceTree = "<group>";
@@ -583,6 +593,7 @@
 				2C2B50C91BBBBED00068C1D5 /* IQKeyboardManager.m in Sources */,
 				2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */,
 				2C2B50CB1BBBBED00068C1D5 /* IQSegmentedNextPrevious.m in Sources */,
+				2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */,
 				2C08A8541BB9366F0077FE53 /* LewPopupViewAnimationFade.m in Sources */,
 				2C89BA961BB51ACF00685F4B /* SBData.m in Sources */,
 				2C2B50C81BBBBED00068C1D5 /* IQUIWindow+Hierarchy.m in Sources */,
@@ -615,6 +626,7 @@
 				2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */,
 				2C2B50CF1BBBBED00068C1D5 /* IQToolbar.m in Sources */,
 				2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */,
+				2CE092EC1BC6344D00027EED /* SBAddScoreTempModule.m in Sources */,
 				2C2B50D01BBBBED00068C1D5 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				2C08A8411BB934940077FE53 /* SBAddPlayerView.m in Sources */,
 				2C3A83F21BB9053200A335B5 /* MGSwipeTableCell.m in Sources */,

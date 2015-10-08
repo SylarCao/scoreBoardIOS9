@@ -55,8 +55,14 @@
 - (NSInteger) getTotalGameScoreForPlayer:(NSInteger)uid
 {
     NSInteger rt = 0;
-    
-    
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        if (each_person.uid == uid)
+        {
+            rt = [each_person getTotalScore];
+            break;
+        }
+    }
     return rt;
 }
 
@@ -70,6 +76,17 @@
             break;
         }
     }
+}
+
+- (NSArray *) getScoreAtRound:(NSInteger)roundNumber
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        NSString *each_score = [each_person getScoreAtRound:roundNumber];
+        [rt addObject:each_score];
+    }
+    return rt;
 }
 
 #pragma mark - test

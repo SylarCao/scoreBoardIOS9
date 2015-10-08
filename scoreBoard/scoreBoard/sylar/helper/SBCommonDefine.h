@@ -27,11 +27,11 @@
 
 
 // main view color
-# define kSBMainViewLineNumberBKGColor  ([SBCommonDefine share].mainViewLineNumberBkgColor)
-# define kSBMainViewLineNumberColor     ([SBCommonDefine share].mainViewLineNumberColor)
-# define kSBMainViewScoreBkgColor1      ([SBCommonDefine share].mainViewScoreBkgColor1)
-# define kSBMainViewScoreBkgColor2      ([SBCommonDefine share].mainViewScoreBkgColor2)
-# define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)
+# define kSBMainViewLineNumberBKGColor  ([SBCommonDefine share].mainViewLineNumberBkgColor)  // 244
+# define kSBMainViewLineNumberColor     ([SBCommonDefine share].mainViewLineNumberColor)    // black color
+# define kSBMainViewScoreBkgColor1      ([SBCommonDefine share].mainViewScoreBkgColor1)    // green 1
+# define kSBMainViewScoreBkgColor2      ([SBCommonDefine share].mainViewScoreBkgColor2)    // green 2
+# define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)          // black color
 
 
 // add score view controller

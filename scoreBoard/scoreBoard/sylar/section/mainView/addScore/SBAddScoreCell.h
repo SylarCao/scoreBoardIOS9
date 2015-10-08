@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SBBasicTableViewCell.h"
 @class SBAddScoreCell;
+@class SBPerson;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 @protocol SBAddScoreCellDelegate <NSObject>
@@ -21,7 +22,7 @@
  *  @param cell <#cell description#>
  *  @param text <#text description#>
  */
-- (void) SBAddScoreCell:(SBAddScoreCell *)cell didChangeInputText:(NSString *)text;
+- (void) SBAddScoreCell:(SBAddScoreCell *)cell willChangeInputText:(NSString *)text;
 
 /**
  *  click auto calculate
@@ -37,7 +38,16 @@
 
 @property (nonatomic, weak) id<SBAddScoreCellDelegate> delegate;
 
-- (void) setWithName:(NSString *)name;
+
+/**
+ *  set person data
+ *
+ *  @param person <#person description#>
+ */
+- (void) setWithPerson:(SBPerson *)person;
+
+
+
 
 
 @end
