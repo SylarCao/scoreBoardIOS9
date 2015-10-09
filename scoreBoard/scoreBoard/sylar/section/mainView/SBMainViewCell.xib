@@ -14,7 +14,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zh9-a5-EaW">
-                        <rect key="frame" x="0.0" y="0.0" width="40" height="37"/>
+                        <rect key="frame" x="0.0" y="1" width="40" height="36"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="fOH-xa-BuH"/>
                         </constraints>
@@ -22,18 +22,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="hUd-cK-VWj">
-                        <rect key="frame" x="41" y="0.0" width="396" height="36"/>
+                        <rect key="frame" x="41" y="1" width="396" height="36"/>
                     </stackView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
-                    <constraint firstItem="hUd-cK-VWj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="D1G-P8-gFG"/>
-                    <constraint firstAttribute="bottom" secondItem="hUd-cK-VWj" secondAttribute="bottom" constant="1" id="DtV-SR-A1V"/>
+                    <constraint firstItem="hUd-cK-VWj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="D1G-P8-gFG"/>
+                    <constraint firstAttribute="bottom" secondItem="hUd-cK-VWj" secondAttribute="bottom" id="DtV-SR-A1V"/>
                     <constraint firstAttribute="bottom" secondItem="zh9-a5-EaW" secondAttribute="bottom" id="SCQ-Xa-qct"/>
                     <constraint firstAttribute="trailing" secondItem="hUd-cK-VWj" secondAttribute="trailing" id="ebu-zG-QRy"/>
                     <constraint firstItem="zh9-a5-EaW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="oaY-ja-fgu"/>
                     <constraint firstItem="hUd-cK-VWj" firstAttribute="leading" secondItem="zh9-a5-EaW" secondAttribute="trailing" constant="1" id="whH-oz-jS1"/>
-                    <constraint firstItem="zh9-a5-EaW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="zJA-cl-GNg"/>
+                    <constraint firstItem="zh9-a5-EaW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="1" id="zJA-cl-GNg"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

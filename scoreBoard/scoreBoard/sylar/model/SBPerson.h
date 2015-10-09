@@ -40,4 +40,12 @@
  */
 - (NSString *) getScoreAtRound:(NSInteger)round;
 
+/**
+ *  add one score
+ *
+ *  @param score <#score description#>
+ */
+- (void) addScore:(NSString *)score;
+
+
 @end

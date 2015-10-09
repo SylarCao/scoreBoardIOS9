@@ -42,7 +42,19 @@
     _screenHeight = [UIScreen mainScreen].bounds.size.height;
 }
 
-
+- (UIColor *) getBkgGreenColor12:(NSInteger)int12
+{
+    UIColor *rt = nil;
+    if ((int12 % 2) == 0)
+    {
+        rt = [SBCommonDefine share].mainViewScoreBkgColor1;
+    }
+    else
+    {
+        rt = [SBCommonDefine share].mainViewScoreBkgColor2;
+    }
+    return rt;
+}
 
 
 

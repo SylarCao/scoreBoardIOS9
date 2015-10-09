@@ -27,12 +27,13 @@
 
 
 // main view color
-# define kSBMainViewLineNumberBKGColor  ([SBCommonDefine share].mainViewLineNumberBkgColor)  // 244
+# define kSBMainViewLineNumberBKGColor  kSBMainViewScoreBkgColor2
 # define kSBMainViewLineNumberColor     ([SBCommonDefine share].mainViewLineNumberColor)    // black color
 # define kSBMainViewScoreBkgColor1      ([SBCommonDefine share].mainViewScoreBkgColor1)    // green 1
 # define kSBMainViewScoreBkgColor2      ([SBCommonDefine share].mainViewScoreBkgColor2)    // green 2
 # define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)          // black color
 
+# define kSBMainVIewScoreBkgColor12(color12)  ([[SBCommonDefine share] getBkgGreenColor12:(color12)])  // color1 or color2
 
 // add score view controller
 # define kSBAddScoreVCTLMinCellHeight  (40)
@@ -56,6 +57,15 @@
 
 
 + (instancetype) share;
+
+/**
+ *  return green1 or green2 color
+ *
+ *  @param int12 <#int12 description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIColor *) getBkgGreenColor12:(NSInteger)int12;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

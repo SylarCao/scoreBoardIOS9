@@ -36,15 +36,27 @@ SBAddPlayerVCTLDelegate>
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 60;
+    NSInteger rt = [[SBData share] getGamesRound] + 1;
+    
+    return rt;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SBMainViewCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBMainViewCell getCellId] forIndexPath:indexPath];
     NSInteger row = indexPath.row;
-    NSArray *score = [[SBData share] getScoreAtRound:row];
-    [rt cellUpdateWithScores:score];
+    if (row < [[SBData share] getGamesRound])
+    {
+        NSArray *score = [[SBData share] getScoreAtRound:row];
+        [rt cellUpdateWithScores:score roundNumber:[NSString stringWithFormat:@"%ld", row+1]];
+    }
+    else
+    {
+        // total score
+        NSArray *total_score = [[SBData share] getTotalGameScore];
+        [rt setWithTotalScore:total_score];
+    }
+    
     return rt;
 }
 

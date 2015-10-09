@@ -38,9 +38,12 @@
 
 - (void) setInitialValue
 {
+    // color
+    self.contentView.backgroundColor = [UIColor lightGrayColor];
+    
     // function view
-    UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    v1.backgroundColor = [UIColor redColor];
+    UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSBMainViewLineNumberWidth, kSBMainViewHeaderHeight)];
+    v1.backgroundColor = kSBMainViewLineNumberBKGColor;
     [self.contentView addSubview:v1];
     
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(btnTap1)];
@@ -51,7 +54,7 @@
     [v1 addGestureRecognizer:ll];
     
     // stack view
-    _stackView = [[UIStackView alloc] initWithFrame:CGRectMake(kSBMainViewLineNumberWidth, 0, kScreenWidth-kSBMainViewLineNumberWidth, kSBMainViewHeaderHeight)];
+    _stackView = [[UIStackView alloc] initWithFrame:CGRectMake(kSBMainViewLineNumberWidth+1, 0, kScreenWidth-kSBMainViewLineNumberWidth-1, kSBMainViewHeaderHeight)];
     _stackView.spacing = 1;
     _stackView.axis = UILayoutConstraintAxisHorizontal;
     _stackView.distribution = UIStackViewDistributionFillEqually;
@@ -106,10 +109,13 @@
         [_stackViewSubViews removeAllObjects];
         
         // add subview
-        for (SBPerson *each_person in current_persons)
+        for (int i=0; i<current_persons.count; i++)
         {
+            SBPerson *each_person = [current_persons objectAtIndex:i];
             UILabel *each_lb = [[UILabel alloc] init];
             each_lb.text = each_person.name;
+            each_lb.textAlignment = NSTextAlignmentCenter;
+            each_lb.backgroundColor = kSBMainVIewScoreBkgColor12(i);
             [_stackViewSubViews addObject:each_lb];
             [_stackView addArrangedSubview:each_lb];
         }

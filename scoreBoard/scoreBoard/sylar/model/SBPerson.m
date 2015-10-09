@@ -42,5 +42,9 @@
     return rt;
 }
 
+- (void) addScore:(NSString *)score
+{
+    [_score addObject:score];
+}
 
 @end

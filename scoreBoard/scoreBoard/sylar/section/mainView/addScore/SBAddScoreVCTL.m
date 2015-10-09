@@ -13,8 +13,7 @@
 #import "SBAddScoreTempModule.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBAddScoreVCTL ()
-<UITableViewDataSource, UITableViewDelegate,
-SBAddScoreCellDelegate>
+<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *table;
 @property (nonatomic, weak) IBOutlet UIButton *btnDone;
@@ -65,12 +64,50 @@ SBAddScoreCellDelegate>
 
 - (IBAction)btnDoneTap:(id)sender
 {
+    NSDictionary *the_score = [[SBAddScoreTempModule share] getAddScore];
+    
+    NSLog(@"add score = %@", the_score);
+    
+    NSInteger total_score = 0;
+    for (NSString *each_score in the_score.allValues)
+    {
+        total_score = total_score + [each_score integerValue];
+    }
+    
+    if (total_score == 0)
+    {
+        [self addScoreBack:the_score];
+    }
+    else
+    {
+        // not equal to Zero => show the action sheet
+        UIAlertController *alert_vctl = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        UIAlertAction *back_button = [UIAlertAction actionWithTitle:@"确认添加分数" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+            [self addScoreBack:the_score];
+        }];
+        [alert_vctl addAction:back_button];
+        UIAlertAction *cancel_button = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+        [alert_vctl addAction:cancel_button];
+        [self presentViewController:alert_vctl animated:YES completion:nil];
+    }
+}
+
+- (void) addScoreBack:(NSDictionary *)score
+{
+    [[SBData share] addOneRoundScore:score];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)btnCancelTap:(id)sender
 {
-    [self.navigationController popViewControllerAnimated:YES];
+    UIAlertController *alert_vctl = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *back_button = [UIAlertAction actionWithTitle:@"返回" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }];
+    [alert_vctl addAction:back_button];
+    UIAlertAction *cancel_button = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert_vctl addAction:cancel_button];
+    [self presentViewController:alert_vctl animated:YES completion:nil];
 }
 
 #pragma mark - table view delegate
@@ -83,7 +120,6 @@ SBAddScoreCellDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SBAddScoreCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBAddScoreCell getCellId] forIndexPath:indexPath];
-    rt.delegate = self;
     SBPerson *person_i = [[SBData share].currentPlayers objectAtIndex:indexPath.row];
     [rt setWithPerson:person_i];
     return rt;
@@ -106,16 +142,6 @@ SBAddScoreCellDelegate>
 }
 
 
-#pragma mark - SBAddScoreCellDelegate
-- (void) SBAddScoreCell:(SBAddScoreCell *)cell willChangeInputText:(NSString *)text
-{
-    
-}
-
-- (void) SBAddScoreCell:(SBAddScoreCell *)cell didTapAutoCalculate:(BOOL)win
-{
-    
-}
 
 
 

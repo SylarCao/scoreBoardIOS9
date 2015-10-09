@@ -42,7 +42,7 @@
     // hide key board
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationTextfieldEndEditing) name:kSBAddScoreNotificationKeyboardName object:nil];
     // auto calculate
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationShowHideButton:) name:kSBAddScoreNotificationAutoCalculateName object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationScoreAutoCalculate:) name:kSBAddScoreNotificationAutoCalculateName object:nil];
     
     // tap
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapCellGesture)];
@@ -75,12 +75,13 @@
         }
         else if (type == sb_add_score_notification_type_show_last)
         {
-            _btnCurrentType = sb_add_score_notification_type_show_win;
+            _btnCurrentType = sb_add_score_notification_type_show_last;
             [_btnAutoCalculate setImage:[UIImage imageNamed:@"img_auto_calculate_last"] forState:UIControlStateNormal];
         }
     }
     else
     {
+        _btnCurrentType = sb_add_score_notification_type_none;
         _btnAutoCalculate.hidden = YES;
     }
 }
@@ -106,7 +107,14 @@
 
 - (IBAction)btnCalculate:(id)sender
 {
-    
+    if (_btnCurrentType == sb_add_score_notification_type_show_win)
+    {
+        [[SBAddScoreTempModule share] calculateWin];
+    }
+    else
+    {
+        [[SBAddScoreTempModule share] calculateLast];
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -114,6 +122,7 @@
 {
     NSString *text = textField.text;
     NSString *uid = [NSString stringWithFormat:@"%ld", _person.uid];
+    
     [[SBAddScoreTempModule share] setWithData:uid score:text];
 }
 

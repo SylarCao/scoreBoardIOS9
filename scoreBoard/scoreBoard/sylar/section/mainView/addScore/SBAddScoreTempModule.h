@@ -44,5 +44,26 @@ typedef NS_ENUM(NSUInteger, SBAddScoreNotificationType) {
  */
 - (void) setWithData:(NSString *)uid score:(NSString *)score;
 
+/**
+ *  press the win button
+ */
+- (void) calculateWin;
+
+
+/**
+ *  press the last button
+ */
+- (void) calculateLast;
+
+/**
+ *  <#Description#>
+ *
+ *  @return <#return value description#>
+ */
+- (NSDictionary *)getAddScore;
+
+
+
+
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

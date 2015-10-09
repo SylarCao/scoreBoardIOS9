@@ -32,7 +32,6 @@
     if (self)
     {
         _currentPlayers = [[NSMutableArray alloc] init];
-        _games = [[NSMutableArray alloc] init];
         [self addFackData1];
     }
     return self;
@@ -46,24 +45,21 @@
     [_currentPlayers addObject:person];
 }
 
-- (void) addGameWithScore:(NSDictionary *)scores type:(SBGameScoreType)gameType
+- (void) addOneRoundScore:(NSDictionary *)scores
 {
-    SBGame *game = [[SBGame alloc] initWithScores:scores type:gameType];
-    [_games addObject:game];
-}
-
-- (NSInteger) getTotalGameScoreForPlayer:(NSInteger)uid
-{
-    NSInteger rt = 0;
     for (SBPerson *each_person in _currentPlayers)
     {
-        if (each_person.uid == uid)
+        NSString *uid = [NSString stringWithFormat:@"%ld", each_person.uid];
+        NSString *score = [scores objectForKey:uid];
+        if (score)
         {
-            rt = [each_person getTotalScore];
-            break;
+            [each_person addScore:score];
+        }
+        else
+        {
+            [each_person addScore:@"0"];
         }
     }
-    return rt;
 }
 
 - (void) removePlayer:(NSInteger)playerUid
@@ -89,6 +85,24 @@
     return rt;
 }
 
+- (NSInteger) getGamesRound
+{
+    SBPerson *last_person = [_currentPlayers lastObject];
+    NSInteger rt = [last_person.score count];
+    return rt;
+}
+
+- (NSArray *) getTotalGameScore
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        NSInteger each_total_score = [each_person getTotalScore];
+        [rt addObject:[NSString stringWithFormat:@"%ld", each_total_score]];
+    }
+    return rt;
+}
+
 #pragma mark - test
 - (void) addFackData1
 {
@@ -96,6 +110,33 @@
     [self addPlayer:@"player2"];
     [self addPlayer:@"player3"];
     [self addPlayer:@"player4"];
+    
+    
+    for (int i=1; i<10; i++)
+    {
+        NSInteger score = i%4+1;
+        [self addFakeScore:score winnerUid:@"2"];
+    }
+}
+
+- (void) addFakeScore:(NSInteger)winScore winnerUid:(NSString *)winnerUid
+{
+    NSMutableDictionary *add_scores = [[NSMutableDictionary alloc] init];
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        if (each_person.uid == [winnerUid integerValue])
+        {
+            NSString *winner_score = [NSString stringWithFormat:@"%ld", winScore*(_currentPlayers.count-1)];
+            [add_scores setObject:winner_score forKey:winnerUid];
+        }
+        else
+        {
+            NSString *loser_score = [NSString stringWithFormat:@"%ld", -winScore];
+            NSString *loser_uid = [NSString stringWithFormat:@"%ld", each_person.uid];
+            [add_scores setObject:loser_score forKey:loser_uid];
+        }
+    }
+    [self addOneRoundScore:add_scores];
 }
 
 

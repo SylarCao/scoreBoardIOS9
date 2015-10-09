@@ -12,10 +12,20 @@
 @interface SBMainViewCell : SBBasicTableViewCell
 
 /**
- *  score array
+*  <#Description#>
+*
+*  @param score       <#score description#>
+*  @param roundNumber <#roundNumber description#>
+*/
+- (void) cellUpdateWithScores:(NSArray *)score roundNumber:(NSString *)roundNumber;
+
+/**
+ *  total score cell
  *
- *  @param score <#score description#>
+ *  @param totalScore <#totalScore description#>
  */
-- (void) cellUpdateWithScores:(NSArray *)score;
+- (void) setWithTotalScore:(NSArray *)totalScore;
+
+
 
 @end

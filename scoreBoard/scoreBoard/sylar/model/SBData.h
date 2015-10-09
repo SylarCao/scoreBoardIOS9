@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SBGame.h"
+//#import "SBGame.h"
 #import "SBPerson.h"
 
 @interface SBData : NSObject
 
 @property (nonatomic, strong) NSMutableArray *currentPlayers;  // array of SBPerson
-@property (nonatomic, strong) NSMutableArray *games;   // array of SBGame
 
 /**
  *  instance
@@ -30,14 +29,12 @@
  */
 - (void) addPlayer:(NSString *)playerName;
 
-
 /**
- *  <#Description#>
+ *  add one round game score
  *
- *  @param scores   uid => score (see SBGame.h)
- *  @param gameType <#gameType description#>
+ *  @param scores uid => score
  */
-- (void) addGameWithScore:(NSDictionary *)scores type:(SBGameScoreType)gameType;
+- (void) addOneRoundScore:(NSDictionary *)scores;
 
 /**
  *  remove the person uid == uid
@@ -54,6 +51,20 @@
  *  @return <#return value description#>
  */
 - (NSArray *) getScoreAtRound:(NSInteger)roundNumber;
+
+/**
+ *  get total game round
+ *
+ *  @return <#return value description#>
+ */
+- (NSInteger) getGamesRound;
+
+/**
+ *  总分
+ *
+ *  @return <#return value description#>
+ */
+- (NSArray *) getTotalGameScore;
 
 
 
