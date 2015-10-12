@@ -26,10 +26,25 @@
     // line number
     _lineNumberWidth.constant = kSBMainViewLineNumberWidth;
     _lineNumberView.backgroundColor = kSBMainViewLineNumberBKGColor;
+    _lineNumberView.textColor = kSBMainViewLineNumberColor;
     
     _stackViewSubViews = [[NSMutableArray alloc] init];
+    
+    UITapGestureRecognizer *tap3 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(gestureTripleTap)];
+    tap3.numberOfTapsRequired = 3;
+    [self.contentView addGestureRecognizer:tap3];
 }
 
+
+- (void) gestureTripleTap
+{
+    NSLog(@"tap 3");
+    if ([_delegate respondsToSelector:@selector(SBMainViewCell:didTripleTapIndex:)])
+    {
+        NSInteger index = [_lineNumberView.text integerValue];
+        [_delegate SBMainViewCell:self didTripleTapIndex:index-1];
+    }
+}
 
 - (void) cellUpdateWithScores:(NSArray *)score roundNumber:(NSString *)roundNumber
 {
@@ -45,7 +60,7 @@
     }
     if (zero_score != 0)
     {
-        text_color = [UIColor redColor];
+        text_color = [UIColor whiteColor];
     }
     
     // score
@@ -65,9 +80,9 @@
     else
     {
         // remove all first
-        for (UIView *each_subview in _stackViewSubViews)
-        {
-            [_stackView removeArrangedSubview:each_subview];
+        while (_stackView.arrangedSubviews.count > 0) {
+            UIView *one_arrange_view = [_stackView.arrangedSubviews lastObject];
+            [one_arrange_view removeFromSuperview];
         }
         [_stackViewSubViews removeAllObjects];
         

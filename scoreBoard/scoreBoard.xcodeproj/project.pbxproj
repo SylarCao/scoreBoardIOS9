@@ -50,6 +50,7 @@
 		2C89BAA71BB5243F00685F4B /* SBBasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA61BB5243F00685F4B /* SBBasicTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA91BB524C300685F4B /* SBCommonDefine.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */; settings = {ASSET_TAGS = (); }; };
+		2C8BAB4A1BC7A416000FD2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2CE092EC1BC6344D00027EED /* SBAddScoreTempModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */; settings = {ASSET_TAGS = (); }; };
 		2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE329C41BBA3729008259DD /* UITextField+Shake.m */; settings = {ASSET_TAGS = (); }; };
@@ -67,8 +68,6 @@
 		2CE5193A1BC76348004DC6BD /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE519291BC76348004DC6BD /* IQToolbar.m */; settings = {ASSET_TAGS = (); }; };
 		2CE5193B1BC76348004DC6BD /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5192B1BC76348004DC6BD /* IQUIView+IQKeyboardToolbar.m */; settings = {ASSET_TAGS = (); }; };
 		2CE5193C1BC76348004DC6BD /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2CE5192E1BC76348004DC6BD /* IQKeyboardManager.bundle */; settings = {ASSET_TAGS = (); }; };
-		2CE51A3C1BC76757004DC6BD /* SBLaunchScreenVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE51A3A1BC76757004DC6BD /* SBLaunchScreenVCTL.m */; settings = {ASSET_TAGS = (); }; };
-		2CE51A3D1BC76757004DC6BD /* SBLaunchScreenVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE51A3B1BC76757004DC6BD /* SBLaunchScreenVCTL.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -143,6 +142,7 @@
 		2C89BAA91BB524C300685F4B /* SBCommonDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCommonDefine.m; sourceTree = "<group>"; };
 		2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewHeader.h; sourceTree = "<group>"; };
 		2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewHeader.m; sourceTree = "<group>"; };
+		2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2CE092DD1BC60ADF00027EED /* SBBasicCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBasicCollectionViewCell.h; sourceTree = "<group>"; };
 		2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBBasicCollectionViewCell.m; sourceTree = "<group>"; };
 		2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreTempModule.m; sourceTree = "<group>"; };
@@ -179,9 +179,6 @@
 		2CE5192B1BC76348004DC6BD /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		2CE5192C1BC76348004DC6BD /* KeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardManager.h; sourceTree = "<group>"; };
 		2CE5192E1BC76348004DC6BD /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
-		2CE51A391BC76757004DC6BD /* SBLaunchScreenVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLaunchScreenVCTL.h; sourceTree = "<group>"; };
-		2CE51A3A1BC76757004DC6BD /* SBLaunchScreenVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLaunchScreenVCTL.m; sourceTree = "<group>"; };
-		2CE51A3B1BC76757004DC6BD /* SBLaunchScreenVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBLaunchScreenVCTL.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,12 +333,10 @@
 		2C65D7171BB39D9B00D22F29 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */,
 				2C65D71B1BB39DCE00D22F29 /* SBHomeVCTL.h */,
 				2C65D71C1BB39DCE00D22F29 /* SBHomeVCTL.m */,
 				2C65D71D1BB39DCE00D22F29 /* SBHomeVCTL.xib */,
-				2CE51A391BC76757004DC6BD /* SBLaunchScreenVCTL.h */,
-				2CE51A3A1BC76757004DC6BD /* SBLaunchScreenVCTL.m */,
-				2CE51A3B1BC76757004DC6BD /* SBLaunchScreenVCTL.xib */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -576,12 +571,12 @@
 				2C65D72B1BB39E4100D22F29 /* icon_152.png in Resources */,
 				2C3A83CB1BB8E4F800A335B5 /* SBAddPlayerVCTL.xib in Resources */,
 				2C65D72D1BB39E4100D22F29 /* icon_40.png in Resources */,
+				2C8BAB4A1BC7A416000FD2DF /* LaunchScreen.storyboard in Resources */,
 				2C3A83D11BB8E6BC00A335B5 /* SBAddScoreVCTL.xib in Resources */,
 				2C65D71F1BB39DCE00D22F29 /* SBHomeVCTL.xib in Resources */,
 				2CE5193C1BC76348004DC6BD /* IQKeyboardManager.bundle in Resources */,
 				2C65D7291BB39E4100D22F29 /* 11519e91feb69ea389a9fc8ec5e2a61d_256_256.png in Resources */,
 				2C3A83FA1BB905EC00A335B5 /* SBAddPlayerCell.xib in Resources */,
-				2CE51A3D1BC76757004DC6BD /* SBLaunchScreenVCTL.xib in Resources */,
 				2C08A8431BB934A10077FE53 /* SBAddPlayerView.xib in Resources */,
 				2C65D72F1BB39E4100D22F29 /* icon_76.png in Resources */,
 				2C65D72E1BB39E4100D22F29 /* icon_58.png in Resources */,
@@ -636,7 +631,6 @@
 				2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */,
 				2CE5192F1BC76348004DC6BD /* IQNSArray+Sort.m in Sources */,
 				2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */,
-				2CE51A3C1BC76757004DC6BD /* SBLaunchScreenVCTL.m in Sources */,
 				2CE092EC1BC6344D00027EED /* SBAddScoreTempModule.m in Sources */,
 				2C08A8411BB934940077FE53 /* SBAddPlayerView.m in Sources */,
 				2CE519371BC76348004DC6BD /* IQTextView.m in Sources */,

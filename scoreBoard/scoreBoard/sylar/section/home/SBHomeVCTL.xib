@@ -35,6 +35,13 @@
                         <action selector="btnRestart:" destination="-1" eventType="touchUpInside" id="tFN-A3-OgU"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-V1-b93">
+                    <rect key="frame" x="89" y="518" width="30" height="30"/>
+                    <state key="normal" title="b1"/>
+                    <connections>
+                        <action selector="btn1:" destination="-1" eventType="touchUpInside" id="HrL-A4-frO"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>

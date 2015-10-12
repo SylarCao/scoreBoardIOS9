@@ -17,7 +17,8 @@
 @interface SBMainVCTL ()
 <UITableViewDataSource, UITableViewDelegate,
 SBMainViewHeaderDelegate,
-SBAddPlayerVCTLDelegate>
+SBAddPlayerVCTLDelegate,
+SBMainViewCellDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *table;
 
@@ -33,6 +34,12 @@ SBAddPlayerVCTLDelegate>
     [_table registerClass:[SBMainViewHeader class] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
 }
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [_table reloadData];
+}
+
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -44,6 +51,7 @@ SBAddPlayerVCTLDelegate>
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     SBMainViewCell *rt = [tableView dequeueReusableCellWithIdentifier:[SBMainViewCell getCellId] forIndexPath:indexPath];
+    rt.delegate = self;
     NSInteger row = indexPath.row;
     if (row < [[SBData share] getGamesRound])
     {
@@ -85,6 +93,12 @@ SBAddPlayerVCTLDelegate>
     return NO;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self test1];
+}
+
 #pragma mark - SBAddPlayerVCTLDelegate
 - (void) SBAddPlayerVCTLDidTapOK
 {
@@ -105,5 +119,26 @@ SBAddPlayerVCTLDelegate>
     SBAddScoreVCTL *add_score = [[SBAddScoreVCTL alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:add_score animated:YES];
 }
+
+#pragma mark - SBMainViewCellDelegate
+- (void) SBMainViewCell:(SBMainViewCell *)cell didTripleTapIndex:(NSInteger)index
+{
+    UIAlertController *alert_vctl = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *back_button = [UIAlertAction actionWithTitle:@"偷偷删除" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        [[SBData share] removeGameRound:index];
+        [_table reloadData];
+    }];
+    [alert_vctl addAction:back_button];
+    UIAlertAction *cancel_button = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];
+    [alert_vctl addAction:cancel_button];
+    [self presentViewController:alert_vctl animated:YES completion:nil];
+}
+
+#pragma mark - test
+- (void) test1
+{
+    NSLog(@"test1");
+}
+
 
 @end

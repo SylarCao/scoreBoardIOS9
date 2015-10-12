@@ -33,7 +33,7 @@
 - (void) setInitialValue
 {
     _mainViewLineNumberBkgColor = RGBCOLOR(244, 244, 244);
-    _mainViewLineNumberColor = [UIColor blackColor];
+    _mainViewLineNumberColor = [UIColor redColor];
     _mainViewScoreBkgColor1 = RGBCOLOR(0, 200, 0);
     _mainViewScoreBkgColor2 = RGBCOLOR(0, 243, 0);
     _mainViewScoreColor = [UIColor blackColor];

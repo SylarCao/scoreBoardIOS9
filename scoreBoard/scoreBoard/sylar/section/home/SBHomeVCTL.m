@@ -9,6 +9,9 @@
 #import "SBHomeVCTL.h"
 #import "SBMainVCTL.h"
 #import "SBCommonDefine.h"
+
+// test
+#import "SBData.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBHomeVCTL ()
 
@@ -50,6 +53,9 @@
     
 }
 
-
+- (IBAction)btn1:(id)sender
+{
+    [[SBData share] addFackData1];
+}
 
 @end

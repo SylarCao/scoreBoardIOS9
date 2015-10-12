@@ -66,7 +66,18 @@
  */
 - (NSArray *) getTotalGameScore;
 
+/**
+ *  remove game round
+ *
+ *  @param round <#round description#>
+ */
+- (void) removeGameRound:(NSInteger)round;
 
 
+
+
+
+// test
+- (void) addFackData1;
 
 @end

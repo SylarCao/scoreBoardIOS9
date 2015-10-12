@@ -17,7 +17,7 @@
 
 # define kSBMainViewLineNumberWidth    (40)
 # define kSBMainViewCellHeight         (30)
-# define kSBMainViewHeaderHeight       (40)
+# define kSBMainViewHeaderHeight       (33)
 
 // common
 # define kSBStatusBarBkgColor     (RGBCOLOR(232, 232, 232))

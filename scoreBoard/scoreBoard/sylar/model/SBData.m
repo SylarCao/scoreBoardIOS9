@@ -32,7 +32,6 @@
     if (self)
     {
         _currentPlayers = [[NSMutableArray alloc] init];
-        [self addFackData1];
     }
     return self;
 }
@@ -103,6 +102,18 @@
     return rt;
 }
 
+- (void) removeGameRound:(NSInteger)round
+{
+    NSInteger game_count = [self getGamesRound];
+    if (game_count > round)
+    {
+        for (SBPerson *each_person in _currentPlayers)
+        {
+            [each_person removeScoreAtRound:round];
+        }
+    }
+}
+
 #pragma mark - test
 - (void) addFackData1
 {
@@ -112,10 +123,27 @@
     [self addPlayer:@"player4"];
     
     
-    for (int i=1; i<10; i++)
+//    [self player1Win:20];
+    
+    [self randonScore:50];
+}
+
+- (void) player1Win:(NSInteger)winCount
+{
+    for (int i=1; i<winCount; i++)
     {
         NSInteger score = i%4+1;
         [self addFakeScore:score winnerUid:@"2"];
+    }
+}
+
+- (void) randonScore:(NSInteger)gameCount
+{
+    for (int i=0; i<gameCount; i++)
+    {
+        NSInteger win_score = arc4random()%5+1;
+        NSInteger win_uid = arc4random()%4+1;
+        [self addFakeScore:win_score winnerUid:[NSString stringWithFormat:@"%ld", win_uid]];
     }
 }
 

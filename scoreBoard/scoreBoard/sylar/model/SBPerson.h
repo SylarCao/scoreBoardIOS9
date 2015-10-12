@@ -47,5 +47,13 @@
  */
 - (void) addScore:(NSString *)score;
 
+/**
+ *  <#Description#>
+ *
+ *  @param round <#round description#>
+ */
+- (void) removeScoreAtRound:(NSInteger)round;
+
+
 
 @end

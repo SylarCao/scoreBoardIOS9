@@ -45,6 +45,10 @@
     UIView *v1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, kSBMainViewLineNumberWidth, kSBMainViewHeaderHeight)];
     v1.backgroundColor = kSBMainViewLineNumberBKGColor;
     [self.contentView addSubview:v1];
+    UIImageView *imgv_setting = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"img_setting"]];
+    imgv_setting.frame = v1.bounds;
+    imgv_setting.contentMode = UIViewContentModeCenter;
+    [v1 addSubview:imgv_setting];
     
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(btnTap1)];
     [v1 addGestureRecognizer:tap1];
@@ -101,10 +105,9 @@
     else
     {
         // remove all the stackview subviews
-        NSArray *stack_view_subview = _stackView.arrangedSubviews;
-        for (UIView *each_view in stack_view_subview)
-        {
-            [_stackView removeArrangedSubview:each_view];
+        while (_stackView.arrangedSubviews.count > 0) {
+            UIView *one_arrange_view = [_stackView.arrangedSubviews lastObject];
+            [one_arrange_view removeFromSuperview];
         }
         [_stackViewSubViews removeAllObjects];
         
