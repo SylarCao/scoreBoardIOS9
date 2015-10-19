@@ -13,12 +13,18 @@
 #import "SBCommonDefine.h"
 #import "SBAddPlayerVCTL.h"
 #import "SBAddScoreVCTL.h"
+#import "SB3dTouchVCTL.h"
+#import "SBMainViewSaveDataView.h"
+#import "LewPopupViewController.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBMainVCTL ()
 <UITableViewDataSource, UITableViewDelegate,
 SBMainViewHeaderDelegate,
 SBAddPlayerVCTLDelegate,
-SBMainViewCellDelegate>
+SBMainViewCellDelegate,
+UIViewControllerPreviewingDelegate,
+SB3dTouchVCTLDelegate,
+SBMainViewSaveDataViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UITableView *table;
 
@@ -32,6 +38,13 @@ SBMainViewCellDelegate>
     
     [_table registerNib:[UINib nibWithNibName:@"SBMainViewCell" bundle:nil] forCellReuseIdentifier:[SBMainViewCell getCellId]];
     [_table registerClass:[SBMainViewHeader class] forHeaderFooterViewReuseIdentifier:[SBMainViewHeader getHeaderId]];
+    
+    // 3d touch
+    if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
+    {
+        NSLog(@"3d touch available");
+        [self registerForPreviewingWithDelegate:self sourceView:self.view];
+    }
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -134,10 +147,87 @@ SBMainViewCellDelegate>
     [self presentViewController:alert_vctl animated:YES completion:nil];
 }
 
+#pragma mark - UIViewControllerPreviewingDelegate
+
+- (nullable UIViewController *)previewingContext:(id <UIViewControllerPreviewing>)previewingContext viewControllerForLocation:(CGPoint)location NS_AVAILABLE_IOS(9_0)
+{
+    SB3dTouchVCTL *d3 = [[SB3dTouchVCTL alloc] initWithNibName:nil bundle:nil];
+    d3.preferredContentSize = CGSizeMake(200, 100);
+    d3.delegate = self;
+    return d3;
+}
+- (void)previewingContext:(id <UIViewControllerPreviewing>)previewingContext commitViewController:(UIViewController *)viewControllerToCommit NS_AVAILABLE_IOS(9_0)
+{
+    [self.navigationController pushViewController:viewControllerToCommit animated:YES];
+}
+
+#pragma mark - SB3dTouchVCTLDelegate
+- (void) SB3dTouchVCTLTapAddScore
+{
+    SBAddScoreVCTL *add_score_vctl = [[SBAddScoreVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:add_score_vctl animated:YES];
+}
+
+- (void) SB3dTouchVCTLTapAddPlayer
+{
+    SBAddPlayerVCTL *add_player_vctl = [[SBAddPlayerVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:add_player_vctl animated:YES];
+}
+
+- (void) SB3dTouchVCTLTapSaveScore
+{
+    // pop up to type description
+    SBMainViewSaveDataView *save_data_view = [SBMainViewSaveDataView getOneFromNib];
+    save_data_view.frame = CGRectMake(0, 0, 300, 300);
+    self.lewDelegate = (id) save_data_view;
+    save_data_view.delegate = self;
+    LewPopupViewAnimationSlide *animation = [[LewPopupViewAnimationSlide alloc]init];
+    animation.type = LewPopupViewAnimationSlideTypeTopBottom;
+    [self lew_presentPopupView:save_data_view animation:animation];
+}
+
+- (void) SB3dTouchVCTLTapBack
+{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void) SB3dTouchVCTLTapOther
+{
+    
+}
+
+
+#pragma mark - SBMainViewSaveDataViewDelegate
+- (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description
+{
+    [self lew_dismissPopupView:YES];
+    BOOL save_success = [[SBData share] saveScore:key withDescription:description];
+    if (save_success)
+    {
+        [self showHudWithContent:@"保存成功"];
+    }
+    else
+    {
+        [self showHudWithContent:@"保存失败"];
+    }
+}
+
+- (void) SBMainViewSaveDataViewDidTapCancel
+{
+    [self lew_dismissPopupView:YES];
+}
+
 #pragma mark - test
 - (void) test1
 {
     NSLog(@"test1");
+}
+
+- (void) test2
+{
+    NSLog(@"test2");
+    SBAddPlayerVCTL *a1 = [[SBAddPlayerVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:a1 animated:YES];
 }
 
 

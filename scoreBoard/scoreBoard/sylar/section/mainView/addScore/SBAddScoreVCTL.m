@@ -24,6 +24,8 @@
 @property (nonatomic, assign) CGFloat lastCellHeight;
 @property (nonatomic, assign) NSInteger current_player_count;
 
+@property (nonatomic, strong) UIButton *btnMinusIcon;
+
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBAddScoreVCTL
@@ -142,9 +144,26 @@
 }
 
 
-
-
-
+//#pragma mark - keyboard
+//- (void) keyBoardDidShow:(NSNotification *)aNotification
+//{
+//    if (_btnMinusIcon == nil)
+//    {
+//        _btnMinusIcon = [[SBHelper share] getMinusIconOnNumberKeyboard];
+//        [_btnMinusIcon addTarget:self action:@selector(btnMinusIconTap) forControlEvents:UIControlEventTouchUpInside];
+//    }
+//    [[[[UIApplication sharedApplication] windows] lastObject] addSubview:_btnMinusIcon];
+//}
+//
+//- (void) keyBoardWillHide:(NSNotification *)aNotification
+//{
+//    [_btnMinusIcon removeFromSuperview];
+//}
+//
+//- (void) btnMinusIconTap
+//{
+//    
+//}
 
 
 

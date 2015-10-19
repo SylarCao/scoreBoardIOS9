@@ -53,6 +53,7 @@
     
     // color - check round score == 0
     UIColor *text_color = kSBMainViewScoreColor;
+    
     NSInteger zero_score = 0;
     for (NSString *each_score in score)
     {
@@ -61,6 +62,10 @@
     if (zero_score != 0)
     {
         text_color = [UIColor whiteColor];
+    }
+    if ([roundNumber isEqualToString:@"总"])
+    {
+        text_color = kSBMainViewTotalScoreColor;
     }
     
     // score

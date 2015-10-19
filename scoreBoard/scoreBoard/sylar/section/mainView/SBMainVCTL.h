@@ -11,4 +11,10 @@
 
 @interface SBMainVCTL : SBBasicVCTL
 
+
+
+
+
+- (void) test2;
+
 @end

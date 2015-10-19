@@ -9,11 +9,18 @@
 #import "SBHomeVCTL.h"
 #import "SBMainVCTL.h"
 #import "SBCommonDefine.h"
+#import "SBHistoryVCTL.h"
 
 // test
 #import "SBData.h"
+#import "SBHelper.h"
+#import "JSONKit.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBHomeVCTL ()
+
+@property (nonatomic, weak) IBOutlet UIButton *btnViewHistory;
+@property (nonatomic, weak) IBOutlet UIButton *btnRestart;
+@property (nonatomic, weak) IBOutlet UIButton *btnContinue;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -24,6 +31,10 @@
     [super viewDidLoad];
     
     [self setWithStatusBarColor];
+    
+    [[SBHelper share] greenButton:_btnContinue];
+    [[SBHelper share] greenButton:_btnRestart];
+    [[SBHelper share] greenButton:_btnViewHistory];
 }
 
 - (void) setWithStatusBarColor
@@ -39,18 +50,23 @@
     [self.navigationController.view addSubview:ss];
 }
 
-
-
-
 - (IBAction)btnRestart:(id)sender
 {
+    [[SBData share] clearAllData];
     SBMainVCTL *mm = [[SBMainVCTL alloc] initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:mm animated:YES];
 }
 
 - (IBAction)btnContinue:(id)sender
 {
-    
+    SBMainVCTL *mm = [[SBMainVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:mm animated:YES];
+}
+
+- (IBAction)btnViewHistory:(id)sender
+{
+    SBHistoryVCTL *his_vctl = [[SBHistoryVCTL alloc] initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:his_vctl animated:YES];
 }
 
 - (IBAction)btn1:(id)sender

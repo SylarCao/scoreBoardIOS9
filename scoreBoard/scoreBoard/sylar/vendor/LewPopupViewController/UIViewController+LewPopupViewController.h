@@ -41,6 +41,7 @@
 - (void)lew_presentPopupView:(UIView *)popupView animation:(id<LewPopupAnimation>)animation dismissed:(void(^)(void))dismissed;
 
 - (void)lew_dismissPopupView;
+- (void) lew_dismissPopupView:(BOOL)force;   // if force, dismiss
 - (void)lew_dismissPopupViewWithanimation:(id<LewPopupAnimation>)animation;
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

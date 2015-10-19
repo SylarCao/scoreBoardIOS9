@@ -12,7 +12,7 @@
 
 @property (nonatomic, assign) NSInteger uid;
 @property (nonatomic, strong) NSString *name;
-@property (nonatomic, strong) NSMutableArray *score;
+@property (nonatomic, strong) NSMutableArray *score;  // array of string
 
 /**
  *  init
@@ -23,6 +23,22 @@
  *  @return id
  */
 - (id) initWithPlayerUid:(NSInteger)uid playerNmae:(NSString *)playerName;
+
+/**
+ *  <#Description#>
+ *
+ *  @param dict <#dict description#>
+ *
+ *  @return <#return value description#>
+ */
+- (id) initWithDictionary:(NSDictionary *)dict;
+
+/**
+ *  convert self to dictionary
+ *
+ *  @return <#return value description#>
+ */
+- (NSDictionary *) toDictionary;
 
 /**
  *  calculate total score
@@ -53,6 +69,8 @@
  *  @param round <#round description#>
  */
 - (void) removeScoreAtRound:(NSInteger)round;
+
+
 
 
 

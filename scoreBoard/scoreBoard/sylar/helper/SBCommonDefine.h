@@ -31,7 +31,8 @@
 # define kSBMainViewLineNumberColor     ([SBCommonDefine share].mainViewLineNumberColor)    // black color
 # define kSBMainViewScoreBkgColor1      ([SBCommonDefine share].mainViewScoreBkgColor1)    // green 1
 # define kSBMainViewScoreBkgColor2      ([SBCommonDefine share].mainViewScoreBkgColor2)    // green 2
-# define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)          // black color
+# define kSBMainViewScoreColor          ([SBCommonDefine share].mainViewScoreColor)          // score color
+# define kSBMainViewTotalScoreColor     ([SBCommonDefine share].mainViewTotalScoreColor)   // total score color (black color)
 
 # define kSBMainVIewScoreBkgColor12(color12)  ([[SBCommonDefine share] getBkgGreenColor12:(color12)])  // color1 or color2
 
@@ -51,6 +52,7 @@
 @property (nonatomic, strong) UIColor *mainViewScoreBkgColor1;
 @property (nonatomic, strong) UIColor *mainViewScoreBkgColor2;
 @property (nonatomic, strong) UIColor *mainViewScoreColor;
+@property (nonatomic, strong) UIColor *mainViewTotalScoreColor;
 
 @property (nonatomic, assign) CGFloat screenWidth;
 @property (nonatomic, assign) CGFloat screenHeight;

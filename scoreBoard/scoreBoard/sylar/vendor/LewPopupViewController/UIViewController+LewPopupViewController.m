@@ -46,8 +46,14 @@
 }
 
 - (void)lew_dismissPopupView{
-    [self dismissPopupViewWithAnimation:self.lewPopupAnimation];
+    [self lew_dismissPopupView:NO];
 }
+
+- (void) lew_dismissPopupView:(BOOL)force
+{
+    [self dismissPopupViewWithAnimation:self.lewPopupAnimation force:force];
+}
+
 #pragma mark - inline property
 - (UIView *)lewPopupView {
     return objc_getAssociatedObject(self, kLEWPopupView);
@@ -167,14 +173,22 @@
 
 }
 
-- (void)dismissPopupViewWithAnimation:(id<LewPopupAnimation>)animation{
+- (void) dismissPopupViewWithAnimation:(id<LewPopupAnimation>)animation
+{
+    [self dismissPopupViewWithAnimation:animation force:NO];
+}
+
+- (void)dismissPopupViewWithAnimation:(id<LewPopupAnimation>)animation force:(BOOL)forceDismiss{
     if (self.lewAllowDismiss == NO)
     {
         if ([self.lewDelegate respondsToSelector:@selector(LewPopupViewControllerTryDismiss:)])
         {
             [self.lewDelegate LewPopupViewControllerTryDismiss:self.lewAllowDismiss];
         }
-        return;
+        if (forceDismiss == NO)
+        {
+            return;
+        }
     }
     else
     {

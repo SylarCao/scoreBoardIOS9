@@ -32,6 +32,20 @@
  */
 - (UIColor *) getRandomColor;
 
+/**
+ *  get reference time from 2001/1/1 8:0:0
+ *
+ *  @return <#return value description#>
+ */
+- (CGFloat) getTime0;
 
+/**
+ *  get image from color
+ *
+ *  @param color <#color description#>
+ *
+ *  @return <#return value description#>
+ */
+- (UIImage *)imageWithColor:(UIColor *)color;
 
 @end

@@ -1,0 +1,42 @@
+//
+//  SBAddScoreHelper.h
+//  scoreBoard
+//
+//  Created by sylar on 15/10/16.
+//  Copyright © 2015年 sylar. All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+@protocol SBAddScoreHelperDelegate <NSObject>
+
+@optional
+- (void) SBAddScoreHelperDidTapMinus;
+
+@end
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+@interface SBAddScoreHelper : NSObject
+
+@property (nonatomic, weak) id<SBAddScoreHelperDelegate> delegate;
+
+/**
+ *  instance
+ *
+ *  @return <#return value description#>
+ */
++ (instancetype) share;
+
+/**
+ *  call when the keyboard did show
+ */
+- (void) showMinusIcon;
+
+/**
+ *  call when the keyboard will hide
+ */
+- (void) hideMinusIcon;
+
+@end
+////////////////////////////////////////////////////////////////////////////////////////////////////////

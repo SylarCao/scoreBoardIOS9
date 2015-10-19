@@ -15,6 +15,21 @@
 		2C08A8551BB9366F0077FE53 /* LewPopupViewAnimationSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A84C1BB9366F0077FE53 /* LewPopupViewAnimationSlide.m */; settings = {ASSET_TAGS = (); }; };
 		2C08A8561BB9366F0077FE53 /* LewPopupViewAnimationSpring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A84E1BB9366F0077FE53 /* LewPopupViewAnimationSpring.m */; settings = {ASSET_TAGS = (); }; };
 		2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C08A8511BB9366F0077FE53 /* UIViewController+LewPopupViewController.m */; settings = {ASSET_TAGS = (); }; };
+		2C0A52501BD08613007F1E32 /* SBAutoSaveVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A524E1BD08613007F1E32 /* SBAutoSaveVCTL.m */; settings = {ASSET_TAGS = (); }; };
+		2C0A52511BD08613007F1E32 /* SBAutoSaveVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0A524F1BD08613007F1E32 /* SBAutoSaveVCTL.xib */; settings = {ASSET_TAGS = (); }; };
+		2C0A52551BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C0A52531BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C0A52561BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C0A52541BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2C1C92C81BD08E71009573E6 /* SBAutoSaveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C92C61BD08E71009573E6 /* SBAutoSaveCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C1C92C91BD08E71009573E6 /* SBAutoSaveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1C92C71BD08E71009573E6 /* SBAutoSaveCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2C1C92CC1BD09362009573E6 /* SBMainViewSaveDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C92CB1BD09362009573E6 /* SBMainViewSaveDataView.m */; settings = {ASSET_TAGS = (); }; };
+		2C1C92CE1BD09373009573E6 /* SBMainViewSaveDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1C92CD1BD09373009573E6 /* SBMainViewSaveDataView.xib */; settings = {ASSET_TAGS = (); }; };
+		2C1C92D71BD0D0BA009573E6 /* SBAddScoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C92D61BD0D0BA009573E6 /* SBAddScoreHelper.m */; settings = {ASSET_TAGS = (); }; };
+		2C2A16501BCF53CC00D065CD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A164F1BCF53CC00D065CD /* MBProgressHUD.m */; settings = {ASSET_TAGS = (); }; };
+		2C2A165F1BCF6C3300D065CD /* SBHistoryVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A165D1BCF6C3300D065CD /* SBHistoryVCTL.m */; settings = {ASSET_TAGS = (); }; };
+		2C2A16601BCF6C3300D065CD /* SBHistoryVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A165E1BCF6C3300D065CD /* SBHistoryVCTL.xib */; settings = {ASSET_TAGS = (); }; };
+		2C2A16691BCF6FF800D065CD /* SBHistoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A16671BCF6FF700D065CD /* SBHistoryViewCell.m */; settings = {ASSET_TAGS = (); }; };
+		2C2A166A1BCF6FF800D065CD /* SBHistoryViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A16681BCF6FF700D065CD /* SBHistoryViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		2C2A16761BCF8F5300D065CD /* SBLocalSaveModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A16751BCF8F5300D065CD /* SBLocalSaveModel.m */; settings = {ASSET_TAGS = (); }; };
 		2C2B50981BBBB4BE0068C1D5 /* SBAddScoreCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2B50961BBBB4BE0068C1D5 /* SBAddScoreCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C2B50991BBBB4BE0068C1D5 /* SBAddScoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2B50971BBBB4BE0068C1D5 /* SBAddScoreCell.xib */; settings = {ASSET_TAGS = (); }; };
 		2C3A83CA1BB8E4F800A335B5 /* SBAddPlayerVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A83C81BB8E4F800A335B5 /* SBAddPlayerVCTL.m */; settings = {ASSET_TAGS = (); }; };
@@ -44,15 +59,18 @@
 		2C89BA961BB51ACF00685F4B /* SBData.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BA951BB51ACF00685F4B /* SBData.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BA991BB51ADF00685F4B /* SBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BA981BB51ADF00685F4B /* SBHelper.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BA9C1BB51C1100685F4B /* SBPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BA9B1BB51C1100685F4B /* SBPerson.m */; settings = {ASSET_TAGS = (); }; };
-		2C89BA9F1BB51C4D00685F4B /* SBGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BA9E1BB51C4D00685F4B /* SBGame.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAA31BB5241E00685F4B /* SBMainViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA11BB5241E00685F4B /* SBMainViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAA41BB5241E00685F4B /* SBMainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C89BAA21BB5241E00685F4B /* SBMainViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		2C89BAA71BB5243F00685F4B /* SBBasicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA61BB5243F00685F4B /* SBBasicTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA91BB524C300685F4B /* SBCommonDefine.m */; settings = {ASSET_TAGS = (); }; };
 		2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */; settings = {ASSET_TAGS = (); }; };
 		2C8BAB4A1BC7A416000FD2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		2CB381981BCF347100D4F33F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB381971BCF347100D4F33F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2CB3819B1BCF363600D4F33F /* SBLocalSaveHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3819A1BCF363600D4F33F /* SBLocalSaveHelper.m */; settings = {ASSET_TAGS = (); }; };
 		2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		2CE092EC1BC6344D00027EED /* SBAddScoreTempModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */; settings = {ASSET_TAGS = (); }; };
+		2CE1F35D1BCE4C5400B82CAE /* SB3dTouchVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE1F35B1BCE4C5400B82CAE /* SB3dTouchVCTL.m */; settings = {ASSET_TAGS = (); }; };
+		2CE1F35E1BCE4C5400B82CAE /* SB3dTouchVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE1F35C1BCE4C5400B82CAE /* SB3dTouchVCTL.xib */; settings = {ASSET_TAGS = (); }; };
 		2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE329C41BBA3729008259DD /* UITextField+Shake.m */; settings = {ASSET_TAGS = (); }; };
 		2CE5192F1BC76348004DC6BD /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5190D1BC76348004DC6BD /* IQNSArray+Sort.m */; settings = {ASSET_TAGS = (); }; };
 		2CE519301BC76348004DC6BD /* IQUITextFieldView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE5190F1BC76348004DC6BD /* IQUITextFieldView+Additions.m */; settings = {ASSET_TAGS = (); }; };
@@ -87,6 +105,30 @@
 		2C08A84F1BB9366F0077FE53 /* LewPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LewPopupViewController.h; sourceTree = "<group>"; };
 		2C08A8501BB9366F0077FE53 /* UIViewController+LewPopupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LewPopupViewController.h"; sourceTree = "<group>"; };
 		2C08A8511BB9366F0077FE53 /* UIViewController+LewPopupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LewPopupViewController.m"; sourceTree = "<group>"; };
+		2C0A524D1BD08613007F1E32 /* SBAutoSaveVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAutoSaveVCTL.h; sourceTree = "<group>"; };
+		2C0A524E1BD08613007F1E32 /* SBAutoSaveVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAutoSaveVCTL.m; sourceTree = "<group>"; };
+		2C0A524F1BD08613007F1E32 /* SBAutoSaveVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAutoSaveVCTL.xib; sourceTree = "<group>"; };
+		2C0A52521BD08648007F1E32 /* SBHistoryViewAutoSaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHistoryViewAutoSaveCell.h; sourceTree = "<group>"; };
+		2C0A52531BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHistoryViewAutoSaveCell.m; sourceTree = "<group>"; };
+		2C0A52541BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBHistoryViewAutoSaveCell.xib; sourceTree = "<group>"; };
+		2C1C92C51BD08E71009573E6 /* SBAutoSaveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAutoSaveCell.h; sourceTree = "<group>"; };
+		2C1C92C61BD08E71009573E6 /* SBAutoSaveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAutoSaveCell.m; sourceTree = "<group>"; };
+		2C1C92C71BD08E71009573E6 /* SBAutoSaveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAutoSaveCell.xib; sourceTree = "<group>"; };
+		2C1C92CA1BD09362009573E6 /* SBMainViewSaveDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewSaveDataView.h; sourceTree = "<group>"; };
+		2C1C92CB1BD09362009573E6 /* SBMainViewSaveDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewSaveDataView.m; sourceTree = "<group>"; };
+		2C1C92CD1BD09373009573E6 /* SBMainViewSaveDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBMainViewSaveDataView.xib; sourceTree = "<group>"; };
+		2C1C92D51BD0D0BA009573E6 /* SBAddScoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreHelper.h; sourceTree = "<group>"; };
+		2C1C92D61BD0D0BA009573E6 /* SBAddScoreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreHelper.m; sourceTree = "<group>"; };
+		2C2A164E1BCF53CC00D065CD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2C2A164F1BCF53CC00D065CD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2C2A165C1BCF6C3300D065CD /* SBHistoryVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHistoryVCTL.h; sourceTree = "<group>"; };
+		2C2A165D1BCF6C3300D065CD /* SBHistoryVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHistoryVCTL.m; sourceTree = "<group>"; };
+		2C2A165E1BCF6C3300D065CD /* SBHistoryVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBHistoryVCTL.xib; sourceTree = "<group>"; };
+		2C2A16661BCF6FF700D065CD /* SBHistoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHistoryViewCell.h; sourceTree = "<group>"; };
+		2C2A16671BCF6FF700D065CD /* SBHistoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHistoryViewCell.m; sourceTree = "<group>"; };
+		2C2A16681BCF6FF700D065CD /* SBHistoryViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBHistoryViewCell.xib; sourceTree = "<group>"; };
+		2C2A16741BCF8F5300D065CD /* SBLocalSaveModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLocalSaveModel.h; sourceTree = "<group>"; };
+		2C2A16751BCF8F5300D065CD /* SBLocalSaveModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLocalSaveModel.m; sourceTree = "<group>"; };
 		2C2B50951BBBB4BE0068C1D5 /* SBAddScoreCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreCell.h; sourceTree = "<group>"; };
 		2C2B50961BBBB4BE0068C1D5 /* SBAddScoreCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreCell.m; sourceTree = "<group>"; };
 		2C2B50971BBBB4BE0068C1D5 /* SBAddScoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBAddScoreCell.xib; sourceTree = "<group>"; };
@@ -131,8 +173,6 @@
 		2C89BA981BB51ADF00685F4B /* SBHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBHelper.m; sourceTree = "<group>"; };
 		2C89BA9A1BB51C1100685F4B /* SBPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBPerson.h; sourceTree = "<group>"; };
 		2C89BA9B1BB51C1100685F4B /* SBPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBPerson.m; sourceTree = "<group>"; };
-		2C89BA9D1BB51C4D00685F4B /* SBGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBGame.h; sourceTree = "<group>"; };
-		2C89BA9E1BB51C4D00685F4B /* SBGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBGame.m; sourceTree = "<group>"; };
 		2C89BAA01BB5241E00685F4B /* SBMainViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewCell.h; sourceTree = "<group>"; };
 		2C89BAA11BB5241E00685F4B /* SBMainViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewCell.m; sourceTree = "<group>"; };
 		2C89BAA21BB5241E00685F4B /* SBMainViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBMainViewCell.xib; sourceTree = "<group>"; };
@@ -143,10 +183,17 @@
 		2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewHeader.h; sourceTree = "<group>"; };
 		2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewHeader.m; sourceTree = "<group>"; };
 		2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2CB381961BCF347100D4F33F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		2CB381971BCF347100D4F33F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		2CB381991BCF363600D4F33F /* SBLocalSaveHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLocalSaveHelper.h; sourceTree = "<group>"; };
+		2CB3819A1BCF363600D4F33F /* SBLocalSaveHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBLocalSaveHelper.m; sourceTree = "<group>"; };
 		2CE092DD1BC60ADF00027EED /* SBBasicCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBBasicCollectionViewCell.h; sourceTree = "<group>"; };
 		2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBBasicCollectionViewCell.m; sourceTree = "<group>"; };
 		2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreTempModule.m; sourceTree = "<group>"; };
 		2CE092FC1BC64E0C00027EED /* SBAddScoreTempModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreTempModule.h; sourceTree = "<group>"; };
+		2CE1F35A1BCE4C5400B82CAE /* SB3dTouchVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SB3dTouchVCTL.h; sourceTree = "<group>"; };
+		2CE1F35B1BCE4C5400B82CAE /* SB3dTouchVCTL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SB3dTouchVCTL.m; sourceTree = "<group>"; };
+		2CE1F35C1BCE4C5400B82CAE /* SB3dTouchVCTL.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SB3dTouchVCTL.xib; sourceTree = "<group>"; };
 		2CE329C31BBA3729008259DD /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
 		2CE329C41BBA3729008259DD /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
 		2CE5190C1BC76348004DC6BD /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
@@ -212,6 +259,45 @@
 			path = LewPopupViewController;
 			sourceTree = "<group>";
 		};
+		2C0A524C1BD085FC007F1E32 /* autoSave */ = {
+			isa = PBXGroup;
+			children = (
+				2C0A524D1BD08613007F1E32 /* SBAutoSaveVCTL.h */,
+				2C0A524E1BD08613007F1E32 /* SBAutoSaveVCTL.m */,
+				2C0A524F1BD08613007F1E32 /* SBAutoSaveVCTL.xib */,
+				2C1C92C51BD08E71009573E6 /* SBAutoSaveCell.h */,
+				2C1C92C61BD08E71009573E6 /* SBAutoSaveCell.m */,
+				2C1C92C71BD08E71009573E6 /* SBAutoSaveCell.xib */,
+			);
+			path = autoSave;
+			sourceTree = "<group>";
+		};
+		2C2A164D1BCF53CC00D065CD /* MBProgressHud */ = {
+			isa = PBXGroup;
+			children = (
+				2C2A164E1BCF53CC00D065CD /* MBProgressHUD.h */,
+				2C2A164F1BCF53CC00D065CD /* MBProgressHUD.m */,
+			);
+			path = MBProgressHud;
+			sourceTree = "<group>";
+		};
+		2C2A165B1BCF6C2100D065CD /* historyView */ = {
+			isa = PBXGroup;
+			children = (
+				2C0A524C1BD085FC007F1E32 /* autoSave */,
+				2C2A165C1BCF6C3300D065CD /* SBHistoryVCTL.h */,
+				2C2A165D1BCF6C3300D065CD /* SBHistoryVCTL.m */,
+				2C2A165E1BCF6C3300D065CD /* SBHistoryVCTL.xib */,
+				2C2A16661BCF6FF700D065CD /* SBHistoryViewCell.h */,
+				2C2A16671BCF6FF700D065CD /* SBHistoryViewCell.m */,
+				2C2A16681BCF6FF700D065CD /* SBHistoryViewCell.xib */,
+				2C0A52521BD08648007F1E32 /* SBHistoryViewAutoSaveCell.h */,
+				2C0A52531BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m */,
+				2C0A52541BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib */,
+			);
+			path = historyView;
+			sourceTree = "<group>";
+		};
 		2C3A83C61BB8E4E700A335B5 /* addPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +317,8 @@
 		2C3A83EB1BB9053200A335B5 /* vendor */ = {
 			isa = PBXGroup;
 			children = (
+				2C2A164D1BCF53CC00D065CD /* MBProgressHud */,
+				2CB381951BCF347100D4F33F /* jsonKit */,
 				2CE5190A1BC76348004DC6BD /* IQKeyBoardManager */,
 				2CE329C21BBA3729008259DD /* textField_shake */,
 				2C08A8441BB9366F0077FE53 /* LewPopupViewController */,
@@ -310,6 +398,7 @@
 		2C65D7151BB39D9B00D22F29 /* section */ = {
 			isa = PBXGroup;
 			children = (
+				2C2A165B1BCF6C2100D065CD /* historyView */,
 				2C89BA8E1BB51AB200685F4B /* mainView */,
 				2C65D7161BB39D9B00D22F29 /* basic */,
 				2C65D7171BB39D9B00D22F29 /* home */,
@@ -363,6 +452,10 @@
 				2C89BA981BB51ADF00685F4B /* SBHelper.m */,
 				2C89BAA81BB524C300685F4B /* SBCommonDefine.h */,
 				2C89BAA91BB524C300685F4B /* SBCommonDefine.m */,
+				2CB381991BCF363600D4F33F /* SBLocalSaveHelper.h */,
+				2CB3819A1BCF363600D4F33F /* SBLocalSaveHelper.m */,
+				2C2A16741BCF8F5300D065CD /* SBLocalSaveModel.h */,
+				2C2A16751BCF8F5300D065CD /* SBLocalSaveModel.m */,
 			);
 			path = helper;
 			sourceTree = "<group>";
@@ -374,8 +467,6 @@
 				2C89BA951BB51ACF00685F4B /* SBData.m */,
 				2C89BA9A1BB51C1100685F4B /* SBPerson.h */,
 				2C89BA9B1BB51C1100685F4B /* SBPerson.m */,
-				2C89BA9D1BB51C4D00685F4B /* SBGame.h */,
-				2C89BA9E1BB51C4D00685F4B /* SBGame.m */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -383,6 +474,7 @@
 		2C89BA8E1BB51AB200685F4B /* mainView */ = {
 			isa = PBXGroup;
 			children = (
+				2CE1F3591BCE49C100B82CAE /* 3dtouch */,
 				2C3A83C61BB8E4E700A335B5 /* addPlayer */,
 				2CADEA271BB52F2A009BBD28 /* addScore */,
 				2C89BA8F1BB51AB200685F4B /* SBMainVCTL.h */,
@@ -393,6 +485,9 @@
 				2C89BAA21BB5241E00685F4B /* SBMainViewCell.xib */,
 				2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */,
 				2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */,
+				2C1C92CA1BD09362009573E6 /* SBMainViewSaveDataView.h */,
+				2C1C92CB1BD09362009573E6 /* SBMainViewSaveDataView.m */,
+				2C1C92CD1BD09373009573E6 /* SBMainViewSaveDataView.xib */,
 			);
 			path = mainView;
 			sourceTree = "<group>";
@@ -408,8 +503,29 @@
 				2C2B50971BBBB4BE0068C1D5 /* SBAddScoreCell.xib */,
 				2CE092FC1BC64E0C00027EED /* SBAddScoreTempModule.h */,
 				2CE092EB1BC6344D00027EED /* SBAddScoreTempModule.m */,
+				2C1C92D51BD0D0BA009573E6 /* SBAddScoreHelper.h */,
+				2C1C92D61BD0D0BA009573E6 /* SBAddScoreHelper.m */,
 			);
 			path = addScore;
+			sourceTree = "<group>";
+		};
+		2CB381951BCF347100D4F33F /* jsonKit */ = {
+			isa = PBXGroup;
+			children = (
+				2CB381961BCF347100D4F33F /* JSONKit.h */,
+				2CB381971BCF347100D4F33F /* JSONKit.m */,
+			);
+			path = jsonKit;
+			sourceTree = "<group>";
+		};
+		2CE1F3591BCE49C100B82CAE /* 3dtouch */ = {
+			isa = PBXGroup;
+			children = (
+				2CE1F35A1BCE4C5400B82CAE /* SB3dTouchVCTL.h */,
+				2CE1F35B1BCE4C5400B82CAE /* SB3dTouchVCTL.m */,
+				2CE1F35C1BCE4C5400B82CAE /* SB3dTouchVCTL.xib */,
+			);
+			path = 3dtouch;
 			sourceTree = "<group>";
 		};
 		2CE329C21BBA3729008259DD /* textField_shake */ = {
@@ -565,19 +681,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C2A16601BCF6C3300D065CD /* SBHistoryVCTL.xib in Resources */,
 				2C89BAA41BB5241E00685F4B /* SBMainViewCell.xib in Resources */,
 				2C65D72C1BB39E4100D22F29 /* icon_29.png in Resources */,
 				2C65D6E81BB38F5C00D22F29 /* Assets.xcassets in Resources */,
 				2C65D72B1BB39E4100D22F29 /* icon_152.png in Resources */,
 				2C3A83CB1BB8E4F800A335B5 /* SBAddPlayerVCTL.xib in Resources */,
 				2C65D72D1BB39E4100D22F29 /* icon_40.png in Resources */,
+				2CE1F35E1BCE4C5400B82CAE /* SB3dTouchVCTL.xib in Resources */,
+				2C0A52511BD08613007F1E32 /* SBAutoSaveVCTL.xib in Resources */,
 				2C8BAB4A1BC7A416000FD2DF /* LaunchScreen.storyboard in Resources */,
 				2C3A83D11BB8E6BC00A335B5 /* SBAddScoreVCTL.xib in Resources */,
+				2C1C92C91BD08E71009573E6 /* SBAutoSaveCell.xib in Resources */,
+				2C0A52561BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib in Resources */,
 				2C65D71F1BB39DCE00D22F29 /* SBHomeVCTL.xib in Resources */,
 				2CE5193C1BC76348004DC6BD /* IQKeyboardManager.bundle in Resources */,
 				2C65D7291BB39E4100D22F29 /* 11519e91feb69ea389a9fc8ec5e2a61d_256_256.png in Resources */,
+				2C1C92CE1BD09373009573E6 /* SBMainViewSaveDataView.xib in Resources */,
 				2C3A83FA1BB905EC00A335B5 /* SBAddPlayerCell.xib in Resources */,
 				2C08A8431BB934A10077FE53 /* SBAddPlayerView.xib in Resources */,
+				2C2A166A1BCF6FF800D065CD /* SBHistoryViewCell.xib in Resources */,
 				2C65D72F1BB39E4100D22F29 /* icon_76.png in Resources */,
 				2C65D72E1BB39E4100D22F29 /* icon_58.png in Resources */,
 				2C2B50991BBBB4BE0068C1D5 /* SBAddScoreCell.xib in Resources */,
@@ -595,9 +718,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */,
+				2CB3819B1BCF363600D4F33F /* SBLocalSaveHelper.m in Sources */,
 				2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */,
+				2C0A52551BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m in Sources */,
 				2C08A8541BB9366F0077FE53 /* LewPopupViewAnimationFade.m in Sources */,
 				2C89BA961BB51ACF00685F4B /* SBData.m in Sources */,
+				2CE1F35D1BCE4C5400B82CAE /* SB3dTouchVCTL.m in Sources */,
 				2C3A83F11BB9053200A335B5 /* MGSwipeButton.m in Sources */,
 				2CE519391BC76348004DC6BD /* IQTitleBarButtonItem.m in Sources */,
 				2CE5193A1BC76348004DC6BD /* IQToolbar.m in Sources */,
@@ -610,23 +736,31 @@
 				2C08A8521BB9366F0077FE53 /* LewPopupBackgroundView.m in Sources */,
 				2C65D71A1BB39DBF00D22F29 /* SBBasicVCTL.m in Sources */,
 				2CE519351BC76348004DC6BD /* IQKeyboardReturnKeyHandler.m in Sources */,
+				2C1C92C81BD08E71009573E6 /* SBAutoSaveCell.m in Sources */,
 				2CE519311BC76348004DC6BD /* IQUIView+Hierarchy.m in Sources */,
+				2CB381981BCF347100D4F33F /* JSONKit.m in Sources */,
 				2CE519321BC76348004DC6BD /* IQUIViewController+Additions.m in Sources */,
 				2CE519341BC76348004DC6BD /* IQKeyboardManager.m in Sources */,
+				2C2A16501BCF53CC00D065CD /* MBProgressHUD.m in Sources */,
 				2CE519361BC76348004DC6BD /* IQSegmentedNextPrevious.m in Sources */,
+				2C2A16761BCF8F5300D065CD /* SBLocalSaveModel.m in Sources */,
+				2C2A165F1BCF6C3300D065CD /* SBHistoryVCTL.m in Sources */,
 				2C08A8561BB9366F0077FE53 /* LewPopupViewAnimationSpring.m in Sources */,
 				2CE519301BC76348004DC6BD /* IQUITextFieldView+Additions.m in Sources */,
 				2CE519381BC76348004DC6BD /* IQBarButtonItem.m in Sources */,
+				2C1C92CC1BD09362009573E6 /* SBMainViewSaveDataView.m in Sources */,
 				2C89BAA31BB5241E00685F4B /* SBMainViewCell.m in Sources */,
 				2CE329C51BBA3729008259DD /* UITextField+Shake.m in Sources */,
 				2C65D71E1BB39DCE00D22F29 /* SBHomeVCTL.m in Sources */,
+				2C0A52501BD08613007F1E32 /* SBAutoSaveVCTL.m in Sources */,
+				2C1C92D71BD0D0BA009573E6 /* SBAddScoreHelper.m in Sources */,
+				2C2A16691BCF6FF800D065CD /* SBHistoryViewCell.m in Sources */,
 				2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */,
 				2C89BA991BB51ADF00685F4B /* SBHelper.m in Sources */,
 				2C65D6E01BB38F5C00D22F29 /* AppDelegate.m in Sources */,
 				2C3A83CA1BB8E4F800A335B5 /* SBAddPlayerVCTL.m in Sources */,
 				2C3A83F91BB905EC00A335B5 /* SBAddPlayerCell.m in Sources */,
 				2CE5193B1BC76348004DC6BD /* IQUIView+IQKeyboardToolbar.m in Sources */,
-				2C89BA9F1BB51C4D00685F4B /* SBGame.m in Sources */,
 				2C65D6DD1BB38F5C00D22F29 /* main.m in Sources */,
 				2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */,
 				2CE5192F1BC76348004DC6BD /* IQNSArray+Sort.m in Sources */,

@@ -6,6 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SBHomeVCTL">
             <connections>
+                <outlet property="btnContinue" destination="XQa-lk-0bJ" id="V0T-QB-1pA"/>
+                <outlet property="btnRestart" destination="vw7-8s-xkj" id="JPp-fS-RUc"/>
+                <outlet property="btnViewHistory" destination="1Lh-2p-SQ2" id="Afz-nt-x2P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,42 +18,66 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_panda" translatesAutoresizingMaskIntoConstraints="NO" id="Oal-6j-DBv">
-                    <rect key="frame" x="98" y="60" width="180" height="180"/>
+                    <rect key="frame" x="98" y="50" width="180" height="180"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="180" id="PQ3-8Y-ev8"/>
-                        <constraint firstAttribute="width" constant="180" id="m7X-Zy-wXc"/>
+                        <constraint firstAttribute="height" constant="180" id="5fg-bZ-tda"/>
+                        <constraint firstAttribute="width" constant="180" id="6za-ge-O3S"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-2p-SQ2">
-                    <rect key="frame" x="172" y="320" width="30" height="30"/>
-                    <state key="normal" title="继续"/>
-                    <connections>
-                        <action selector="btnContinue:" destination="-1" eventType="touchUpInside" id="VIb-YK-IKa"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-8s-xkj">
-                    <rect key="frame" x="158" y="420" width="60" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vw7-8s-xkj">
+                    <rect key="frame" x="10" y="460" width="355" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="N9S-ac-chU"/>
+                    </constraints>
                     <state key="normal" title="重新开始"/>
                     <connections>
-                        <action selector="btnRestart:" destination="-1" eventType="touchUpInside" id="tFN-A3-OgU"/>
+                        <action selector="btnRestart:" destination="-1" eventType="touchUpInside" id="mnY-Ub-1qt"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-V1-b93">
-                    <rect key="frame" x="89" y="518" width="30" height="30"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf7-V1-b93">
+                    <rect key="frame" x="51" y="570" width="30" height="30"/>
                     <state key="normal" title="b1"/>
                     <connections>
-                        <action selector="btn1:" destination="-1" eventType="touchUpInside" id="HrL-A4-frO"/>
+                        <action selector="btn1:" destination="-1" eventType="touchUpInside" id="h5I-Xd-i9U"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQa-lk-0bJ">
+                    <rect key="frame" x="10" y="380" width="355" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZFz-1Y-hXB"/>
+                    </constraints>
+                    <state key="normal" title="继续"/>
+                    <connections>
+                        <action selector="btnContinue:" destination="-1" eventType="touchUpInside" id="OP6-Nz-8sl"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Lh-2p-SQ2">
+                    <rect key="frame" x="10" y="300" width="355" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="aTw-bg-z8X"/>
+                    </constraints>
+                    <state key="normal" title="查看历史"/>
+                    <connections>
+                        <action selector="btnViewHistory:" destination="-1" eventType="touchUpInside" id="D3K-pj-tLW"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="vw7-8s-xkj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9xV-M8-Xhs"/>
-                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="top" secondItem="Oal-6j-DBv" secondAttribute="bottom" constant="80" id="CPF-be-s3a"/>
-                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MiJ-NX-VQi"/>
-                <constraint firstItem="Oal-6j-DBv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="VAW-cs-6Jm"/>
-                <constraint firstItem="vw7-8s-xkj" firstAttribute="top" secondItem="1Lh-2p-SQ2" secondAttribute="bottom" constant="70" id="XEl-uK-Z4y"/>
-                <constraint firstItem="Oal-6j-DBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iip-4O-Nd2"/>
+                <constraint firstItem="vw7-8s-xkj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="3Nq-dX-AI4"/>
+                <constraint firstItem="vw7-8s-xkj" firstAttribute="top" secondItem="XQa-lk-0bJ" secondAttribute="bottom" constant="30" id="4cJ-2o-sGG"/>
+                <constraint firstItem="Pf7-V1-b93" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="570" id="95m-f2-HqP"/>
+                <constraint firstAttribute="trailing" secondItem="XQa-lk-0bJ" secondAttribute="trailing" constant="10" id="Cc4-DI-4cL"/>
+                <constraint firstAttribute="trailing" secondItem="vw7-8s-xkj" secondAttribute="trailing" constant="10" id="G43-hE-V8M"/>
+                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="TI9-Jh-O9E"/>
+                <constraint firstItem="1Lh-2p-SQ2" firstAttribute="top" secondItem="Oal-6j-DBv" secondAttribute="bottom" constant="70" id="gb2-pv-8zL"/>
+                <constraint firstAttribute="trailing" secondItem="Pf7-V1-b93" secondAttribute="trailing" constant="294" id="gvg-32-oyr"/>
+                <constraint firstItem="XQa-lk-0bJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="lBh-IA-MdP"/>
+                <constraint firstAttribute="trailing" secondItem="1Lh-2p-SQ2" secondAttribute="trailing" constant="10" id="lnV-fp-rGQ"/>
+                <constraint firstItem="Oal-6j-DBv" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="m8c-GC-oaK"/>
+                <constraint firstItem="Pf7-V1-b93" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="51" id="ome-dV-vfU"/>
+                <constraint firstItem="Oal-6j-DBv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pFQ-FJ-Rl9"/>
+                <constraint firstItem="XQa-lk-0bJ" firstAttribute="top" secondItem="1Lh-2p-SQ2" secondAttribute="bottom" constant="30" id="vge-DG-ODS"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="450.5" y="397.5"/>

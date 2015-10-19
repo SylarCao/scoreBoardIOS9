@@ -10,4 +10,12 @@
 
 @interface SBBasicVCTL : UIViewController
 
+/**
+ *  show hud for 1 second
+ *
+ *  @param content title on hud
+ */
+- (void) showHudWithContent:(NSString *)content;
+
+
 @end

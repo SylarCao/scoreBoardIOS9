@@ -36,7 +36,8 @@
     _mainViewLineNumberColor = [UIColor redColor];
     _mainViewScoreBkgColor1 = RGBCOLOR(0, 200, 0);
     _mainViewScoreBkgColor2 = RGBCOLOR(0, 243, 0);
-    _mainViewScoreColor = [UIColor blackColor];
+    _mainViewScoreColor = [UIColor colorWithWhite:0.33 alpha:1];
+    _mainViewTotalScoreColor = [UIColor blackColor];
     
     _screenWidth = [UIScreen mainScreen].bounds.size.width;
     _screenHeight = [UIScreen mainScreen].bounds.size.height;

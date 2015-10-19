@@ -9,11 +9,12 @@
 #import "SBAddScoreCell.h"
 #import "SBPerson.h"
 #import "SBAddScoreTempModule.h"
+#import "SBAddScoreHelper.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 # define kSBAddScoreCellKeyBoardDownNotification @"kSBAddScoreCellKeyBoardDownNotification"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBAddScoreCell()
-<UITextFieldDelegate>
+<UITextFieldDelegate, SBAddScoreHelperDelegate>
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *lbNameWidth;
 @property (nonatomic, weak) IBOutlet UILabel *name;
@@ -44,6 +45,11 @@
     // auto calculate
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveNotificationScoreAutoCalculate:) name:kSBAddScoreNotificationAutoCalculateName object:nil];
     
+    // keyboard
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardDidShow:) name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    
+
     // tap
     UITapGestureRecognizer *tap1 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapCellGesture)];
     [self.contentView addGestureRecognizer:tap1];
@@ -124,6 +130,47 @@
     NSString *uid = [NSString stringWithFormat:@"%ld", _person.uid];
     
     [[SBAddScoreTempModule share] setWithData:uid score:text];
+}
+
+#pragma mark - keyboard && SBAddScoreHelperDelegate
+- (void) keyBoardDidShow:(NSNotification *)aNotification
+{
+    BOOL first_responder = [_inputTextField isFirstResponder];
+    if (first_responder)
+    {
+        [[SBAddScoreHelper share] showMinusIcon];
+        [SBAddScoreHelper share].delegate = self;
+    }
+}
+
+- (void) keyBoardWillHide:(NSNotification *)aNotification
+{
+    BOOL first_responder = [_inputTextField isFirstResponder];
+    if (first_responder)
+    {
+        [[SBAddScoreHelper share] hideMinusIcon];
+    }
+}
+
+- (void) SBAddScoreHelperDidTapMinus
+{
+    NSString *score_typed = _inputTextField.text;
+    if (score_typed.length >= 1)
+    {
+        NSString *first_string = [score_typed substringToIndex:1];
+        if ([first_string isEqualToString:@"-"])
+        {
+            _inputTextField.text = [score_typed substringFromIndex:1];
+        }
+        else
+        {
+            _inputTextField.text = [NSString stringWithFormat:@"-%@", score_typed];
+        }
+    }
+    else
+    {
+        _inputTextField.text = @"-";
+    }
 }
 
 @end

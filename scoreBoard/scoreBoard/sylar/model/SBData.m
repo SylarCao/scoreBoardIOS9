@@ -8,6 +8,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "SBData.h"
 #import "SBPerson.h"
+#import "SBLocalSaveHelper.h"
+#import "SBHelper.h"
+#import "SBLocalSaveModel.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBData()
 
@@ -34,6 +37,11 @@
         _currentPlayers = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void) clearAllData
+{
+    [_currentPlayers removeAllObjects];
 }
 
 - (void) addPlayer:(NSString *)playerName
@@ -114,6 +122,36 @@
     }
 }
 
+- (BOOL) saveScore:(NSString *)key
+{
+    BOOL rt = [self saveScore:key withDescription:@"无"];
+    return rt;
+}
+
+- (BOOL) saveScore:(NSString *)key withDescription:(NSString *)description
+{
+    NSMutableArray *save_data = [[NSMutableArray alloc] init];
+    for (SBPerson *each_person in _currentPlayers)
+    {
+        NSDictionary *each_dict = [each_person toDictionary];
+        [save_data addObject:each_dict];
+    }
+    NSString *key_with_time = [NSString stringWithFormat:@"%@_%ld", key, (NSInteger)[[SBHelper share] getTime0]];
+    BOOL rt = [[SBLocalSaveHelper share] saveLocalData:save_data withKey:key_with_time description:description];
+    return rt;
+}
+
+- (void) revertWithKey:(NSString *)key
+{
+    [_currentPlayers removeAllObjects];
+    NSArray *persons = [[SBLocalSaveHelper share] getLocalDataWithKey:key];
+    for (NSDictionary *each_person in persons)
+    {
+        SBPerson *person = [[SBPerson alloc] initWithDictionary:each_person];
+        [_currentPlayers addObject:person];
+    }
+}
+
 #pragma mark - test
 - (void) addFackData1
 {
@@ -143,7 +181,8 @@
     {
         NSInteger win_score = arc4random()%5+1;
         NSInteger win_uid = arc4random()%4+1;
-        [self addFakeScore:win_score winnerUid:[NSString stringWithFormat:@"%ld", win_uid]];
+        NSString *aa = [NSString stringWithFormat:@"%ld", win_uid];
+        [self addFakeScore:win_score winnerUid:aa];
     }
 }
 
@@ -167,6 +206,39 @@
     [self addOneRoundScore:add_scores];
 }
 
+- (NSArray *) getPlistModels
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    
+    // other save plist
+    NSArray *arr_dict = [[SBLocalSaveHelper share] getAllPlistDictionary];
+    for (NSDictionary *each_dict in arr_dict)
+    {
+        SBLocalSaveModel *each_model = [[SBLocalSaveModel alloc] initWithDictionary:each_dict];
+        [rt insertObject:each_model atIndex:0];
+    }
+    
+//    // plist
+//    NSDictionary *auto_save_dict = [[SBLocalSaveHelper share] getAutoPlistDictionary];
+//    SBLocalSaveModel *auto_save_model = [[SBLocalSaveModel alloc] initWithDictionary:auto_save_dict];
+//    [rt insertObject:auto_save_model atIndex:0];
+    
+    return rt;
+}
+
+- (NSArray *) getAutoSavePlistModels
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    
+    // array of NSDictionary
+    NSArray *arr_auto_save = [[SBLocalSaveHelper share] getAutoSavePlist];
+    for (NSDictionary *each_dict in arr_auto_save)
+    {
+        SBLocalSaveModel *aModel = [[SBLocalSaveModel alloc] initWithDictionary:each_dict];
+        [rt addObject:aModel];
+    }
+    return rt;
+}
 
 
 @end

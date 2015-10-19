@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-//#import "SBGame.h"
 #import "SBPerson.h"
 
 @interface SBData : NSObject
@@ -21,6 +20,10 @@
  */
 + (instancetype) share;
 
+/**
+ *  clear all data, init
+ */
+- (void) clearAllData;
 
 /**
  *  add one player with name
@@ -73,8 +76,37 @@
  */
 - (void) removeGameRound:(NSInteger)round;
 
+/**
+ *  save score to local
+ *
+ *  @param key         key, 唯一， 不要重复, with time0
+ *  @param description default = @"无"
+ *
+ *  @return <#return value description#>
+ */
+- (BOOL) saveScore:(NSString *)key withDescription:(NSString *)description;
+- (BOOL) saveScore:(NSString *)key;
 
+/**
+ *  查看历史版本
+ *
+ *  @param key key，with time0
+ */
+- (void) revertWithKey:(NSString *)key;
 
+/**
+ *  保存过的(不包括 autoSave)
+ *
+ *  @return array of SBLocalSaveModel
+ */
+- (NSArray *) getPlistModels;
+
+/**
+ *  auto save 的plist
+ *
+ *  @return array of SBLocalSaveModel
+ */
+- (NSArray *) getAutoSavePlistModels;
 
 
 // test
