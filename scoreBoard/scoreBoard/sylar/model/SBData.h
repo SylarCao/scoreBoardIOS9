@@ -79,12 +79,11 @@
 /**
  *  save score to local
  *
- *  @param key         key, 唯一， 不要重复, with time0
- *  @param description default = @"无"
+ *  @param data key, 唯一， 不要重复, with time0
  *
  *  @return <#return value description#>
  */
-- (BOOL) saveScore:(NSString *)key withDescription:(NSString *)description;
+- (BOOL) saveScoreWithDictionary:(NSDictionary *)data;
 - (BOOL) saveScore:(NSString *)key;
 
 /**

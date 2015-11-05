@@ -225,12 +225,16 @@
 }
 
 -(UIView*)topView {
+    return self.view;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wunreachable-code"
     UIViewController *recentView = self;
     
     while (recentView.parentViewController != nil) {
         recentView = recentView.parentViewController;
     }
     return recentView.view;
+#pragma clang diagnostic pop
 }
 
 

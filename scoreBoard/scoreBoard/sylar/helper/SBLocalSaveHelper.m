@@ -9,6 +9,7 @@
 #import "SBLocalSaveHelper.h"
 #import "JSONKit.h"
 #import "SBData.h"
+#import "SBCommonDefine.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 # define kAutoSaveTimeInterval  (30)  // 5 min
 # define kAutoSaveMaxNumber     (10)  // autoSave的最大保存的数量
@@ -21,7 +22,7 @@
 
 // 保存的数据的index
 /**
- *  all of   @{time0: time0, description: description, key:key, persons:@[ @{uid: uid, name: name, score: totalScore} * 4 ]}
+ *  all of   @{time0: time0, description: description, key:key, location: 上海人民广场,  persons:@[ @{uid: uid, name: name, score: totalScore} * 4 ]}
  */
 @property (nonatomic, strong) NSMutableArray *allData;  // 所有保存的index array of NSDictionary
 @property (nonatomic, strong) NSString *allDataPathPlist;  // ...plist
@@ -76,19 +77,24 @@
     }
 }
 
-- (BOOL) saveLocalData:(NSArray *)persons withKey:(NSString *)key description:(NSString *)description
+- (BOOL) saveLocalData:(NSDictionary *)data persons:(NSArray *)persons
 {
     BOOL save_data_success = NO;
     BOOL save_plist_success = NO;
+    
+    NSString *key = [data objectForKey:kSBSaveDataKey];
+    NSString *description = [data objectForKey:kSBSaveDataDescription];
+    NSString *location = [data objectForKey:kSBSaveDataLocation];
+    
     // save data
-    NSData *data = [persons JSONData];
+    NSData *json_data = [persons JSONData];
     NSString *path = [NSString stringWithFormat:@"%@/%@", _savePath, key];
-    save_data_success = [[NSFileManager defaultManager] createFileAtPath:path contents:data attributes:nil];
+    save_data_success = [[NSFileManager defaultManager] createFileAtPath:path contents:json_data attributes:nil];
     
     // save to plist
     if (save_data_success)
     {
-        NSDictionary *one_plist_dict = [self getPlistWithDescription:description key:key];
+        NSDictionary *one_plist_dict = [self getPlistWithDescription:description key:key location:location];
         [_allData addObject:one_plist_dict];
         save_plist_success = [self saveAllDataPlist];
     }
@@ -104,7 +110,7 @@
     return rt;
 }
 
-- (NSDictionary *) getPlistWithDescription:(NSString *)description key:(NSString *)key
+- (NSDictionary *) getPlistWithDescription:(NSString *)description key:(NSString *)key location:(NSString *)location
 {
     NSTimeInterval time0 = [NSDate timeIntervalSinceReferenceDate];
     
@@ -119,7 +125,11 @@
         [all_persons addObject:each_dict];
     }
     
-    NSDictionary *rt = @{@"key": key, @"description": description, @"time0": [NSString stringWithFormat:@"%f", time0], @"persons": all_persons};
+    NSDictionary *rt = @{kSBSaveDataKey: key,
+                         kSBSaveDataDescription: description,
+                         kSBSaveDataTime0: [NSString stringWithFormat:@"%f", time0],
+                         kSBSaveDataLocation: location,
+                         @"persons": all_persons};
     
     return rt;
 }
@@ -139,7 +149,7 @@
     if (time0_now - last_save_time0 > kAutoSaveTimeInterval)
     {
         // only save 5 minute later
-        NSDictionary *auto_save_dict = [self getPlistWithDescription:@"auto save" key:@"auto save"];
+        NSDictionary *auto_save_dict = [self getPlistWithDescription:@"auto save" key:@"auto save" location:@""];
         NSMutableArray *auto_save_array = [[user_default objectForKey:@"autoSave"] mutableCopy];
         if (auto_save_array == nil)
         {

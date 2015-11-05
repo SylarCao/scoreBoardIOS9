@@ -13,8 +13,4 @@
 
 
 
-
-
-- (void) test2;
-
 @end

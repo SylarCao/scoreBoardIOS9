@@ -39,6 +39,13 @@
 // add score view controller
 # define kSBAddScoreVCTLMinCellHeight  (40)
 
+// save helper in plist
+# define kSBSaveDataKey @"key"
+# define kSBSaveDataDescription @"description"
+# define kSBSaveDataTime0 @"time0"
+# define kSBSaveDataLocation @"location"
+
+
 
 
 

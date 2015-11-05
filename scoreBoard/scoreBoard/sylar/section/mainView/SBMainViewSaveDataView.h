@@ -8,11 +8,20 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import <UIKit/UIKit.h>
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ *  用大众点评的location
+ *
+ *  @param success  没选择地点或者失败，返回NO
+ *  @param location <#location description#>
+ */
+typedef void (^SBGetDPLocation)(BOOL success, NSString *location);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 @protocol SBMainViewSaveDataViewDelegate <NSObject>
 
 @optional
-- (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description;
+- (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description location:(NSString *)location;
 - (void) SBMainViewSaveDataViewDidTapCancel;
+- (void) SBMainViewSaveDataViewDidTapLocationWithBlock:(SBGetDPLocation)block;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

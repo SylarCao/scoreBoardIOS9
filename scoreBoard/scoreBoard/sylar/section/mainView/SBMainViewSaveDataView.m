@@ -20,11 +20,12 @@
 @property (nonatomic, weak) IBOutlet UIButton *btnOK;
 @property (nonatomic, weak) IBOutlet UIButton *btnCancel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *btnOkWidth;
+@property (nonatomic, weak) IBOutlet UIButton *btnLocation;
+@property (nonatomic, weak) IBOutlet UILabel *lbLocation;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBMainViewSaveDataView
-
 
 + (instancetype) getOneFromNib
 {
@@ -39,7 +40,6 @@
 
 - (void) awakeFromNib
 {
-//    [[SBHelper share] greenButton:_btnOK];
     self.backgroundColor = [UIColor whiteColor];
     self.layer.cornerRadius = 10;
     self.layer.masksToBounds = YES;
@@ -50,15 +50,35 @@
     [[SBHelper share] greenButton:_btnCancel];
     [[SBHelper share] greenButton:_btnOK];
     _btnOkWidth.constant = kSBMainViewSaveDataViewBtnOKWidth;
+    
+    // button loation
+    [_btnLocation setBackgroundImage:[[SBHelper share] imageWithColor:[UIColor colorWithWhite:0.9 alpha:1]] forState:UIControlStateNormal];
+    [_btnLocation setBackgroundImage:[[SBHelper share] imageWithColor:[UIColor colorWithWhite:0.8 alpha:1]] forState:UIControlStateHighlighted];
+    _btnLocation.layer.cornerRadius = 5;
+    _btnLocation.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    _btnLocation.layer.borderWidth = 0.5;
+    _btnLocation.layer.masksToBounds = YES;
+    
+}
+
+- (IBAction)btnLocationTap:(id)sender
+{
+    if ([_delegate respondsToSelector:@selector(SBMainViewSaveDataViewDidTapLocationWithBlock:)])
+    {
+        [_delegate SBMainViewSaveDataViewDidTapLocationWithBlock:^(BOOL success, NSString *location) {
+            NSLog(@"select location call back");
+        }];
+    }
 }
 
 - (IBAction)btnOkTap:(id)sender
 {
-    if ([_delegate respondsToSelector:@selector(SBMainViewSaveDataViewDidTapOKWithKey:description:)])
+    if ([_delegate respondsToSelector:@selector(SBMainViewSaveDataViewDidTapOKWithKey:description:location:)])
     {
         NSString *key = _keyTextField.text;
         NSString *des = _descriptionTextView.text;
-        [_delegate performSelector:@selector(SBMainViewSaveDataViewDidTapOKWithKey:description:) withObject:key withObject:des];
+        NSString *location = @"location_1234567";
+        [_delegate SBMainViewSaveDataViewDidTapOKWithKey:key description:des location:location];
     }
 }
 

@@ -1,0 +1,29 @@
+//
+//  SBDPLocationCell.m
+//  scoreBoard
+//
+//  Created by sylar on 15/11/4.
+//  Copyright © 2015年 sylar. All rights reserved.
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+#import "SBDPLocationCell.h"
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+@interface SBDPLocationCell()
+
+
+@property (nonatomic, weak) IBOutlet UILabel *lbTitle;
+@property (nonatomic, weak) IBOutlet UILabel *lbContent;
+
+@end
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+@implementation SBDPLocationCell
+
+- (void) setWithName:(NSString *)name address:(NSString *)address
+{
+    _lbTitle.text = name;
+    _lbContent.text = address;
+}
+
+
+
+@end

@@ -22,6 +22,7 @@
 @property (nonatomic, assign) NSInteger time0;
 @property (nonatomic, strong) NSString *descriptionContent;
 @property (nonatomic, strong) NSString *key;
+@property (nonatomic, strong) NSString *location;
 @property (nonatomic, strong) NSMutableArray *persons;  // array of SBLocalModelPerson
 
 - (id) initWithDictionary:(NSDictionary *)dict;

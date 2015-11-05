@@ -16,6 +16,7 @@
 #import "SB3dTouchVCTL.h"
 #import "SBMainViewSaveDataView.h"
 #import "LewPopupViewController.h"
+#import "SBDPLocationVCTL.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBMainVCTL ()
 <UITableViewDataSource, UITableViewDelegate,
@@ -51,13 +52,15 @@ SBMainViewSaveDataViewDelegate>
 {
     [super viewWillAppear:animated];
     [_table reloadData];
+    
+    // 太慢了
+    [SBMainViewSaveDataView getOneFromNib];
 }
 
 #pragma mark - table view delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     NSInteger rt = [[SBData share] getGamesRound] + 1;
-    
     return rt;
 }
 
@@ -109,7 +112,6 @@ SBMainViewSaveDataViewDelegate>
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [self test1];
 }
 
 #pragma mark - SBAddPlayerVCTLDelegate
@@ -178,7 +180,7 @@ SBMainViewSaveDataViewDelegate>
 {
     // pop up to type description
     SBMainViewSaveDataView *save_data_view = [SBMainViewSaveDataView getOneFromNib];
-    save_data_view.frame = CGRectMake(0, 0, 300, 300);
+    save_data_view.frame = CGRectMake(0, 0, 300, 340);
     self.lewDelegate = (id) save_data_view;
     save_data_view.delegate = self;
     LewPopupViewAnimationSlide *animation = [[LewPopupViewAnimationSlide alloc]init];
@@ -198,10 +200,11 @@ SBMainViewSaveDataViewDelegate>
 
 
 #pragma mark - SBMainViewSaveDataViewDelegate
-- (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description
+- (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description location:(NSString *)location
 {
     [self lew_dismissPopupView:YES];
-    BOOL save_success = [[SBData share] saveScore:key withDescription:description];
+    NSDictionary *dict = @{kSBSaveDataKey: key, kSBSaveDataDescription: description, kSBSaveDataLocation: location};
+    BOOL save_success = [[SBData share] saveScoreWithDictionary:dict];
     if (save_success)
     {
         [self showHudWithContent:@"保存成功"];
@@ -217,18 +220,13 @@ SBMainViewSaveDataViewDelegate>
     [self lew_dismissPopupView:YES];
 }
 
-#pragma mark - test
-- (void) test1
+- (void) SBMainViewSaveDataViewDidTapLocationWithBlock:(SBGetDPLocation)block
 {
-    NSLog(@"test1");
+    SBDPLocationVCTL *dp_location_vctl = [[SBDPLocationVCTL alloc] initWithNibName:nil bundle:nil];
+    dp_location_vctl.block = block;
+    [self.navigationController pushViewController:dp_location_vctl animated:YES];
 }
 
-- (void) test2
-{
-    NSLog(@"test2");
-    SBAddPlayerVCTL *a1 = [[SBAddPlayerVCTL alloc] initWithNibName:nil bundle:nil];
-    [self.navigationController pushViewController:a1 animated:YES];
-}
 
 
 @end

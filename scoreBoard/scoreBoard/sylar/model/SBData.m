@@ -124,20 +124,23 @@
 
 - (BOOL) saveScore:(NSString *)key
 {
-    BOOL rt = [self saveScore:key withDescription:@"无"];
+    BOOL rt = [self saveScoreWithDictionary:@{kSBSaveDataKey: @"无"}];
     return rt;
 }
 
-- (BOOL) saveScore:(NSString *)key withDescription:(NSString *)description
+- (BOOL) saveScoreWithDictionary:(NSDictionary *)data
 {
+    NSString *key = [data objectForKey:kSBSaveDataKey];
     NSMutableArray *save_data = [[NSMutableArray alloc] init];
     for (SBPerson *each_person in _currentPlayers)
     {
         NSDictionary *each_dict = [each_person toDictionary];
         [save_data addObject:each_dict];
     }
-    NSString *key_with_time = [NSString stringWithFormat:@"%@_%ld", key, (NSInteger)[[SBHelper share] getTime0]];
-    BOOL rt = [[SBLocalSaveHelper share] saveLocalData:save_data withKey:key_with_time description:description];
+    NSString *key_with_time = [NSString stringWithFormat:@"%@_%ld", key, (long)[[SBHelper share] getTime0]];
+    NSMutableDictionary *muta_dict = [data mutableCopy];
+    [muta_dict setObject:key_with_time forKey:kSBSaveDataKey];
+    BOOL rt = [[SBLocalSaveHelper share] saveLocalData:data persons:save_data];
     return rt;
 }
 

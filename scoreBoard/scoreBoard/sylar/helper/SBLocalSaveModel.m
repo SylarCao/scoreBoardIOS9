@@ -24,6 +24,7 @@
         _descriptionContent = [dict objectForKey:@"description"];
         _key = [dict objectForKey:@"key"];
         _persons = [[NSMutableArray alloc] init];
+        _location = [dict objectForKey:@"location"];
         for (NSDictionary *each_dict in [dict objectForKey:@"persons"])
         {
             SBLocalModelPerson *each_person = [[SBLocalModelPerson alloc] init];
@@ -32,7 +33,6 @@
             each_person.totalScore = [each_dict objectForKey:@"score"];
             [_persons addObject: each_person];
         }
-        
     }
     return self;
 }

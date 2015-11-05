@@ -21,13 +21,24 @@
  *  save data to local, use NSFileManager
  *  save to plist
  *
- *  @param persons     <#persons description#>
- *  @param key         key to save  唯一 不要重复
- *  @param description plist的描述
+ *  @param data      key, description, location
+ *  @param persons <#persons description#>
  *
  *  @return <#return value description#>
  */
-- (BOOL) saveLocalData:(NSArray *)persons withKey:(NSString *)key description:(NSString *)description;
+- (BOOL) saveLocalData:(NSDictionary *)data persons:(NSArray *)persons;
+
+///**
+// *  save data to local, use NSFileManager
+// *  save to plist
+// *
+// *  @param persons     <#persons description#>
+// *  @param key         key to save  唯一 不要重复
+// *  @param description plist的描述
+// *
+// *  @return <#return value description#>
+// */
+//- (BOOL) saveLocalData:(NSArray *)persons withKey:(NSString *)key description:(NSString *)description;
 
 /**
  *  get data from local
