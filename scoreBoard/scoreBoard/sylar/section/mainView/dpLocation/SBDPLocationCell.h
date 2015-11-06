@@ -15,10 +15,11 @@
 /**
  *  loaction info from dp
  *
- *  @param name    人民广场
- *  @param address 西藏路1000号
+ *  @param name      人民广场
+ *  @param address   西藏路1000号
+ *  @param distance  200米
  */
-- (void) setWithName:(NSString *)name address:(NSString *)address;
+- (void) setWithName:(NSString *)name address:(NSString *)address distance:(NSString *)distance;
 
 
 

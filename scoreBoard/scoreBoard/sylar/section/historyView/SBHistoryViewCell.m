@@ -48,7 +48,18 @@
         }
         score_content = [NSString stringWithFormat:@"%@%@:   %@", score_content, name, score];
     }
+//    _lbScroe.text = score_content;
+    
+    // 地址  暂时就放在score里，最上边
+    NSString *location  = data.location;
+    if (location.length > 1)
+    {
+        score_content = [NSString stringWithFormat:@"地址:%@\n%@", location, score_content];
+    }
     _lbScroe.text = score_content;
+    
+    
+    
     
 }
 

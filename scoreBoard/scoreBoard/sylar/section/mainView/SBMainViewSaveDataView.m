@@ -66,7 +66,7 @@
     if ([_delegate respondsToSelector:@selector(SBMainViewSaveDataViewDidTapLocationWithBlock:)])
     {
         [_delegate SBMainViewSaveDataViewDidTapLocationWithBlock:^(BOOL success, NSString *location) {
-            NSLog(@"select location call back");
+            _lbLocation.text = location;
         }];
     }
 }
@@ -77,7 +77,7 @@
     {
         NSString *key = _keyTextField.text;
         NSString *des = _descriptionTextView.text;
-        NSString *location = @"location_1234567";
+        NSString *location = _lbLocation.text;
         [_delegate SBMainViewSaveDataViewDidTapOKWithKey:key description:des location:location];
     }
 }

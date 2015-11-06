@@ -110,6 +110,7 @@
         UIAlertAction *use_score_button = [UIAlertAction actionWithTitle:@"使用这个" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
             SBLocalSaveModel *model = [_data objectAtIndex:row-1];
             [[SBData share] revertWithKey:model.key];
+            [self.navigationController popViewControllerAnimated:YES];
         }];
         [alert_vctl addAction:use_score_button];
         UIAlertAction *cancel_button = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil];

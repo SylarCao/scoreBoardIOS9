@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -18,18 +19,25 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="b8d-Yf-kq0"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DH8-BM-uNh">
                         <rect key="frame" x="10" y="40" width="310" height="29"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Vg-Bt-8fU" userLabel="Label - distance">
+                        <rect key="frame" x="283" y="8" width="29" height="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="4Vg-Bt-8fU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="3Xo-bL-tfl"/>
                     <constraint firstItem="wsZ-G3-LXW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="6P9-m5-Srk"/>
                     <constraint firstAttribute="bottom" secondItem="DH8-BM-uNh" secondAttribute="bottom" id="BzG-h5-9m6"/>
                     <constraint firstAttribute="trailing" secondItem="DH8-BM-uNh" secondAttribute="trailing" id="HrM-ba-hmd"/>
@@ -37,10 +45,12 @@
                     <constraint firstAttribute="trailing" secondItem="wsZ-G3-LXW" secondAttribute="trailing" id="ME1-zs-E9b"/>
                     <constraint firstItem="wsZ-G3-LXW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Mgd-AA-LxS"/>
                     <constraint firstItem="DH8-BM-uNh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="jqS-7l-LFG"/>
+                    <constraint firstItem="4Vg-Bt-8fU" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="vIa-cc-0L6"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="lbContent" destination="DH8-BM-uNh" id="oib-gO-myU"/>
+                <outlet property="lbDistance" destination="4Vg-Bt-8fU" id="6VN-xf-hR8"/>
                 <outlet property="lbTitle" destination="wsZ-G3-LXW" id="N3W-aL-oEZ"/>
             </connections>
             <point key="canvasLocation" x="476" y="378"/>

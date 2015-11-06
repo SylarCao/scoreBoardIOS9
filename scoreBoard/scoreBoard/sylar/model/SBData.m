@@ -140,7 +140,7 @@
     NSString *key_with_time = [NSString stringWithFormat:@"%@_%ld", key, (long)[[SBHelper share] getTime0]];
     NSMutableDictionary *muta_dict = [data mutableCopy];
     [muta_dict setObject:key_with_time forKey:kSBSaveDataKey];
-    BOOL rt = [[SBLocalSaveHelper share] saveLocalData:data persons:save_data];
+    BOOL rt = [[SBLocalSaveHelper share] saveLocalData:muta_dict persons:save_data];
     return rt;
 }
 

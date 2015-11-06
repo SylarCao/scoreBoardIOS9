@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
 #import "SBLocationHelper.h"
+#import "SBCategory.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /**
@@ -42,6 +43,15 @@ typedef void (^SBDPGetLocationBlock)(BOOL success, NSArray *location, BOOL hasMo
  *  @param block <#block description#>
  */
 - (void) requestMoreLocationData:(SBDPGetLocationBlock)block;
+
+/**
+ *  大众点评最多返回40个，就一下子全部请求
+ *
+ *  @param block <#block description#>
+ */
+- (void) request40Data:(SBDPGetLocationBlock)block;
+
+
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

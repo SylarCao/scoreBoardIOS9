@@ -203,6 +203,10 @@ SBMainViewSaveDataViewDelegate>
 - (void) SBMainViewSaveDataViewDidTapOKWithKey:(NSString *)key description:(NSString *)description location:(NSString *)location
 {
     [self lew_dismissPopupView:YES];
+    if (key.length < 1)
+    {
+        key = @"no_key";
+    }
     NSDictionary *dict = @{kSBSaveDataKey: key, kSBSaveDataDescription: description, kSBSaveDataLocation: location};
     BOOL save_success = [[SBData share] saveScoreWithDictionary:dict];
     if (save_success)

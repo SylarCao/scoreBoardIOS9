@@ -13,15 +13,17 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *lbTitle;
 @property (nonatomic, weak) IBOutlet UILabel *lbContent;
+@property (nonatomic, weak) IBOutlet UILabel *lbDistance;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBDPLocationCell
 
-- (void) setWithName:(NSString *)name address:(NSString *)address
+- (void) setWithName:(NSString *)name address:(NSString *)address distance:(NSString *)distance
 {
     _lbTitle.text = name;
     _lbContent.text = address;
+    _lbDistance.text = distance;
 }
 
 

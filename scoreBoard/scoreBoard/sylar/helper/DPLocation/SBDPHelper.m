@@ -17,10 +17,12 @@
 @property (nonatomic, strong) NSString *dpSecret;
 @property (nonatomic, strong) NSString *dpUrl;
 @property (nonatomic, assign) NSInteger page;
+@property (nonatomic, assign) NSInteger requestCount;  // 1个page有几条数据
 
 @property (nonatomic, strong) SBDPGetLocationBlock block;
 @property (nonatomic, assign) CLLocationDegrees longitude;
 @property (nonatomic, assign) CLLocationDegrees latitude;
+
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -45,6 +47,7 @@
         _dpSecret = @"0fb9f066d21f43dc92e6d2f123172eb7";
         _dpUrl = @"http://api.dianping.com/v1/business/find_businesses";
         _page = 0;
+        _requestCount = 20;
     }
     return self;
 }
@@ -74,12 +77,33 @@
     [self requestLocationWithLongitude:_longitude latitude:_latitude];
 }
 
+- (void) request40Data:(SBDPGetLocationBlock)block
+{
+    _block = block;
+    _page = 1;
+    _requestCount = 40;
+    [[SBLocationHelper share] getOneLocationWithBlock:^(BOOL success, CLLocationDegrees longitude, CLLocationDegrees latitude) {
+        if (success)
+        {
+            _longitude = longitude;
+            _latitude = latitude;
+            [self requestLocationWithLongitude:longitude latitude:latitude];
+        }
+        else
+        {
+            block(NO, nil, NO);
+        }
+    }];
+}
+
 - (void) requestLocationWithLongitude:(CLLocationDegrees)longitude latitude:(CLLocationDegrees)latitude
 {
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
     [dict setObject:[NSString stringWithFormat:@"%f", longitude] forKey:@"longitude"];
     [dict setObject:[NSString stringWithFormat:@"%f", latitude] forKey:@"latitude"];
     [dict setObject:[NSString stringWithFormat:@"%ld", (long)_page] forKey:@"page"];
+    [dict setObject:[NSString stringWithFormat:@"%ld", _requestCount] forKey:@"limit"];
+    [dict setObject:@"7" forKey:@"sort"];
     [dict setObject:@"2" forKey:@"platform"];
     NSString *the_string = [self dictToString:dict];
     NSString *sha_string = [self shaDP:the_string];
@@ -93,33 +117,26 @@
         url = [url stringByAppendingFormat:@"&%@=%@", each_key, value];
     }
     NSLog(@"dp Url = %@", url);
-    //    url = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
-    
     
     // request
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"JSON: %@", responseObject);
+        NSArray *stores = [self parseData:responseObject];
         if (_block)
         {
-//            _block(YES, [responseObject JSONString]);
-            _block(YES, responseObject, YES);
+            _block(YES, stores, YES);
         }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
         if (_block)
         {
-//            _block(NO, @"error");
             _block(NO, nil, NO);
             
         }
     }];
-    
 }
-
 
 - (NSString *) dictToString:(NSDictionary *)dict
 {
@@ -163,7 +180,26 @@
         return nil;
     }
 #pragma clang diagnostic pop
-    
+}
+
+- (NSArray *) parseData:(NSDictionary *)data
+{
+    NSMutableArray *rt = [[NSMutableArray alloc] init];
+    NSArray *business = [data objectForKey:@"businesses"];
+    for (NSDictionary *each_location in business)
+    {
+        NSString *location_name = [each_location objectForKey:@"name"];
+        NSString *address = [each_location objectForKey:@"address"];
+        NSString *branch = [each_location objectForKey:@"branch_name"]; //  宜山路店, 光启城店
+        NSString *distance = [[each_location objectForKey:@"distance"] stringValue];
+        if (branch.length > 1)
+        {
+            location_name = [NSString stringWithFormat:@"%@(%@)", location_name, branch];
+        }
+        SBLocationModel *model = [[SBLocationModel alloc] initWithLocation:location_name address:address distance:distance];
+        [rt addObject:model];
+    }
+    return rt;
 }
 
 @end

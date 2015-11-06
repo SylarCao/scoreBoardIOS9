@@ -102,6 +102,9 @@
 		2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAA91BB524C300685F4B /* SBCommonDefine.m */; };
 		2C89BAAD1BB52CD100685F4B /* SBMainViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */; };
 		2C8BAB4A1BC7A416000FD2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */; };
+		2C9FA5E41BEC498700197EF4 /* SBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FA5E31BEC498700197EF4 /* SBCategory.m */; };
+		2C9FA5E81BEC4CE700197EF4 /* SBDPLocationNoDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9FA5E61BEC4CE700197EF4 /* SBDPLocationNoDataCell.m */; };
+		2C9FA5E91BEC4CE700197EF4 /* SBDPLocationNoDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9FA5E71BEC4CE700197EF4 /* SBDPLocationNoDataCell.xib */; };
 		2CB381981BCF347100D4F33F /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB381971BCF347100D4F33F /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2CB3819B1BCF363600D4F33F /* SBLocalSaveHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CB3819A1BCF363600D4F33F /* SBLocalSaveHelper.m */; };
 		2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE092DE1BC60ADF00027EED /* SBBasicCollectionViewCell.m */; };
@@ -292,6 +295,11 @@
 		2C89BAAB1BB52CD100685F4B /* SBMainViewHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBMainViewHeader.h; sourceTree = "<group>"; };
 		2C89BAAC1BB52CD100685F4B /* SBMainViewHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBMainViewHeader.m; sourceTree = "<group>"; };
 		2C8BAB491BC7A416000FD2DF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2C9FA5E21BEC498700197EF4 /* SBCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCategory.h; sourceTree = "<group>"; };
+		2C9FA5E31BEC498700197EF4 /* SBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCategory.m; sourceTree = "<group>"; };
+		2C9FA5E51BEC4CE700197EF4 /* SBDPLocationNoDataCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBDPLocationNoDataCell.h; sourceTree = "<group>"; };
+		2C9FA5E61BEC4CE700197EF4 /* SBDPLocationNoDataCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBDPLocationNoDataCell.m; sourceTree = "<group>"; };
+		2C9FA5E71BEC4CE700197EF4 /* SBDPLocationNoDataCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBDPLocationNoDataCell.xib; sourceTree = "<group>"; };
 		2CB381961BCF347100D4F33F /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		2CB381971BCF347100D4F33F /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		2CB381991BCF363600D4F33F /* SBLocalSaveHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBLocalSaveHelper.h; sourceTree = "<group>"; };
@@ -388,6 +396,8 @@
 				2C0DCA4E1BEB68C5008F4861 /* SBLocationHelper.m */,
 				2C0DCA501BEB68D1008F4861 /* SBDPHelper.h */,
 				2C0DCA511BEB68D1008F4861 /* SBDPHelper.m */,
+				2C9FA5E21BEC498700197EF4 /* SBCategory.h */,
+				2C9FA5E31BEC498700197EF4 /* SBCategory.m */,
 			);
 			path = DPLocation;
 			sourceTree = "<group>";
@@ -498,6 +508,9 @@
 				2C4BE09D1BEA22E4004F1DAF /* SBDPLocationCustomCell.h */,
 				2C4BE09E1BEA22E4004F1DAF /* SBDPLocationCustomCell.m */,
 				2C4BE09F1BEA22E4004F1DAF /* SBDPLocationCustomCell.xib */,
+				2C9FA5E51BEC4CE700197EF4 /* SBDPLocationNoDataCell.h */,
+				2C9FA5E61BEC4CE700197EF4 /* SBDPLocationNoDataCell.m */,
+				2C9FA5E71BEC4CE700197EF4 /* SBDPLocationNoDataCell.xib */,
 			);
 			path = dpLocation;
 			sourceTree = "<group>";
@@ -955,6 +968,7 @@
 				2C4BE0A11BEA22E4004F1DAF /* SBDPLocationCustomCell.xib in Resources */,
 				2C3A83D11BB8E6BC00A335B5 /* SBAddScoreVCTL.xib in Resources */,
 				2C4BE00C1BE9A0DF004F1DAF /* SBDPLocationCell.xib in Resources */,
+				2C9FA5E91BEC4CE700197EF4 /* SBDPLocationNoDataCell.xib in Resources */,
 				2C1C92C91BD08E71009573E6 /* SBAutoSaveCell.xib in Resources */,
 				2C0A52561BD08648007F1E32 /* SBHistoryViewAutoSaveCell.xib in Resources */,
 				2C65D71F1BB39DCE00D22F29 /* SBHomeVCTL.xib in Resources */,
@@ -986,6 +1000,7 @@
 				2C0DCA6E1BEB6DF3008F4861 /* AFHTTPRequestOperationManager.m in Sources */,
 				2C0DCA6D1BEB6DF3008F4861 /* AFHTTPRequestOperation.m in Sources */,
 				2C89BAAA1BB524C300685F4B /* SBCommonDefine.m in Sources */,
+				2C9FA5E81BEC4CE700197EF4 /* SBDPLocationNoDataCell.m in Sources */,
 				2CB3819B1BCF363600D4F33F /* SBLocalSaveHelper.m in Sources */,
 				2CE092DF1BC60ADF00027EED /* SBBasicCollectionViewCell.m in Sources */,
 				2C0A52551BD08648007F1E32 /* SBHistoryViewAutoSaveCell.m in Sources */,
@@ -1057,6 +1072,7 @@
 				2C0DCA4F1BEB68C5008F4861 /* SBLocationHelper.m in Sources */,
 				2C08A8531BB9366F0077FE53 /* LewPopupViewAnimationDrop.m in Sources */,
 				2CE5192F1BC76348004DC6BD /* IQNSArray+Sort.m in Sources */,
+				2C9FA5E41BEC498700197EF4 /* SBCategory.m in Sources */,
 				2C0DCA721BEB6DF3008F4861 /* AFURLConnectionOperation.m in Sources */,
 				2C08A8571BB9366F0077FE53 /* UIViewController+LewPopupViewController.m in Sources */,
 				2C0DCA731BEB6DF3008F4861 /* AFURLRequestSerialization.m in Sources */,
