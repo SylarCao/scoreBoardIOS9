@@ -47,7 +47,7 @@
 - (void) viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [self pullDownRefresh];
+    [_tableView.header beginRefreshing];
 }
 
 - (void) pullDownRefresh
