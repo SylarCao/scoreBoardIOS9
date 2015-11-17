@@ -10,6 +10,15 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBLocalModelPerson
 
+- (NSDictionary *)toDictionary
+{
+    NSDictionary *rt = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        _uid, @"uid",
+                        _name, @"name",
+                        _totalScore, @"score",
+                        nil];
+    return rt;
+}
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -35,6 +44,24 @@
         }
     }
     return self;
+}
+
+- (NSDictionary *)toDictionary
+{
+    NSMutableArray *persons = [[NSMutableArray alloc] init];
+    for (SBLocalModelPerson *each_person in _persons)
+    {
+        NSDictionary *each_person_dict = [each_person toDictionary];
+        [persons addObject:each_person_dict];
+    }
+    NSDictionary *rt = [[NSDictionary alloc] initWithObjectsAndKeys:
+                        [NSString stringWithFormat:@"%ld", _time0], @"time0",
+                        _descriptionContent, @"description",
+                        _key, @"key",
+                        persons, @"persons",
+                        _location, @"location",
+                        nil];
+    return rt;
 }
 
 @end

@@ -15,6 +15,8 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *totalScore;
 
+- (NSDictionary *)toDictionary;
+
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBLocalSaveModel : NSObject
@@ -26,6 +28,8 @@
 @property (nonatomic, strong) NSMutableArray *persons;  // array of SBLocalModelPerson
 
 - (id) initWithDictionary:(NSDictionary *)dict;
+
+- (NSDictionary *)toDictionary;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -36,6 +36,7 @@
 		2C1C92CC1BD09362009573E6 /* SBMainViewSaveDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C92CB1BD09362009573E6 /* SBMainViewSaveDataView.m */; };
 		2C1C92CE1BD09373009573E6 /* SBMainViewSaveDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C1C92CD1BD09373009573E6 /* SBMainViewSaveDataView.xib */; };
 		2C1C92D71BD0D0BA009573E6 /* SBAddScoreHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1C92D61BD0D0BA009573E6 /* SBAddScoreHelper.m */; };
+		2C23B7621BFAF79200E87E95 /* SBTouchID.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C23B7611BFAF79200E87E95 /* SBTouchID.m */; };
 		2C2A16501BCF53CC00D065CD /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A164F1BCF53CC00D065CD /* MBProgressHUD.m */; };
 		2C2A165F1BCF6C3300D065CD /* SBHistoryVCTL.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2A165D1BCF6C3300D065CD /* SBHistoryVCTL.m */; };
 		2C2A16601BCF6C3300D065CD /* SBHistoryVCTL.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C2A165E1BCF6C3300D065CD /* SBHistoryVCTL.xib */; };
@@ -184,6 +185,8 @@
 		2C1C92CD1BD09373009573E6 /* SBMainViewSaveDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBMainViewSaveDataView.xib; sourceTree = "<group>"; };
 		2C1C92D51BD0D0BA009573E6 /* SBAddScoreHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBAddScoreHelper.h; sourceTree = "<group>"; };
 		2C1C92D61BD0D0BA009573E6 /* SBAddScoreHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBAddScoreHelper.m; sourceTree = "<group>"; };
+		2C23B7601BFAF79200E87E95 /* SBTouchID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTouchID.h; sourceTree = "<group>"; };
+		2C23B7611BFAF79200E87E95 /* SBTouchID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTouchID.m; sourceTree = "<group>"; };
 		2C2A164E1BCF53CC00D065CD /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2C2A164F1BCF53CC00D065CD /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2C2A165C1BCF6C3300D065CD /* SBHistoryVCTL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBHistoryVCTL.h; sourceTree = "<group>"; };
@@ -426,6 +429,15 @@
 				2C0DCA6C1BEB6DF3008F4861 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		2C23B75F1BFAF78000E87E95 /* touchID */ = {
+			isa = PBXGroup;
+			children = (
+				2C23B7601BFAF79200E87E95 /* SBTouchID.h */,
+				2C23B7611BFAF79200E87E95 /* SBTouchID.m */,
+			);
+			path = touchID;
 			sourceTree = "<group>";
 		};
 		2C2A164D1BCF53CC00D065CD /* MBProgressHud */ = {
@@ -718,6 +730,7 @@
 		2C89BA871BB51A7700685F4B /* helper */ = {
 			isa = PBXGroup;
 			children = (
+				2C23B75F1BFAF78000E87E95 /* touchID */,
 				2C0DCA4C1BEB68B8008F4861 /* DPLocation */,
 				2C89BA971BB51ADF00685F4B /* SBHelper.h */,
 				2C89BA981BB51ADF00685F4B /* SBHelper.m */,
@@ -1027,6 +1040,7 @@
 				2C1C92C81BD08E71009573E6 /* SBAutoSaveCell.m in Sources */,
 				2CE519311BC76348004DC6BD /* IQUIView+Hierarchy.m in Sources */,
 				2C0DCA741BEB6DF3008F4861 /* AFURLResponseSerialization.m in Sources */,
+				2C23B7621BFAF79200E87E95 /* SBTouchID.m in Sources */,
 				2C4BE0991BEA2123004F1DAF /* MJRefreshConst.m in Sources */,
 				2C4BE08A1BEA2123004F1DAF /* MJRefreshAutoFooter.m in Sources */,
 				2CB381981BCF347100D4F33F /* JSONKit.m in Sources */,

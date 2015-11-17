@@ -17,5 +17,14 @@
  */
 - (void) showHudWithContent:(NSString *)content;
 
+/**
+ *  显示菊花
+ */
+- (void) showHudAnimation;
+
+/**
+ *  隐藏菊花
+ */
+- (void) hideHudAnimation;
 
 @end

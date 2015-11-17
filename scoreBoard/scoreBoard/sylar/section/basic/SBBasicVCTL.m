@@ -11,6 +11,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBBasicVCTL ()
 
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 @end
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -31,6 +32,17 @@
     [hud hide:YES afterDelay:1];
 }
 
+- (void) showHudAnimation
+{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _hud = hud;
+    [hud show:YES];
+}
+
+- (void) hideHudAnimation
+{
+    [_hud hide:YES];
+}
 
 
 @end

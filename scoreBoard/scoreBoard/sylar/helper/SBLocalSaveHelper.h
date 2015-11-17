@@ -5,9 +5,12 @@
 //  Created by sylar on 15/10/15.
 //  Copyright © 2015年 sylar. All rights reserved.
 //
-
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import <Foundation/Foundation.h>
-
+#import "SBLocalSaveModel.h"
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+typedef void (^SBLocalSaveBlock)(BOOL success);
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBLocalSaveHelper : NSObject
 
 /**
@@ -27,18 +30,6 @@
  *  @return <#return value description#>
  */
 - (BOOL) saveLocalData:(NSDictionary *)data persons:(NSArray *)persons;
-
-///**
-// *  save data to local, use NSFileManager
-// *  save to plist
-// *
-// *  @param persons     <#persons description#>
-// *  @param key         key to save  唯一 不要重复
-// *  @param description plist的描述
-// *
-// *  @return <#return value description#>
-// */
-//- (BOOL) saveLocalData:(NSArray *)persons withKey:(NSString *)key description:(NSString *)description;
 
 /**
  *  get data from local
@@ -67,5 +58,13 @@
  *  @return array of NSDictionary
  */
 - (NSArray *) getAllPlistDictionary;
+
+/**
+ *  修改本地保存的东西
+ *
+ *  @param models array of SBLocalSaveModel
+ *  @param block  <#block description#>
+ */
+- (void)synchronizeWithData:(NSArray *)models block:(SBLocalSaveBlock)block;
 
 @end

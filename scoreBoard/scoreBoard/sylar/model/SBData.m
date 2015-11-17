@@ -218,7 +218,7 @@
     for (NSDictionary *each_dict in arr_dict)
     {
         SBLocalSaveModel *each_model = [[SBLocalSaveModel alloc] initWithDictionary:each_dict];
-        [rt insertObject:each_model atIndex:0];
+        [rt addObject:each_model];
     }
     
 //    // plist

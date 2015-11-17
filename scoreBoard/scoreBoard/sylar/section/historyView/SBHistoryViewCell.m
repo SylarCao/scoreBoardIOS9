@@ -8,6 +8,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #import "SBHistoryViewCell.h"
 #import "SBLocalSaveModel.h"
+#import "MGSwipeButton.h"
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface SBHistoryViewCell()
 
@@ -19,9 +20,24 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @implementation SBHistoryViewCell
 
-- (void)awakeFromNib {
-    
-    
++ (NSString *) getCellId
+{
+    NSString *rt = NSStringFromClass([self class]);
+    return rt;
+}
+
+- (void) setWithDeleteButton
+{
+    MGSwipeButton *b1 = [MGSwipeButton buttonWithTitle:@"删除" backgroundColor:[UIColor redColor] callback:^BOOL(MGSwipeTableCell *sender) {
+        if ([_delegateTap respondsToSelector:@selector(SBHistoryViewCellDidTapDelete:)])
+        {
+            [_delegateTap performSelector:@selector(SBHistoryViewCellDidTapDelete:) withObject:self];
+        }
+        return YES;
+    }];
+    [b1 setPadding:20];
+    self.rightSwipeSettings.transition = MGSwipeTransitionStatic;
+    self.rightButtons = @[b1];
 }
 
 - (void) setWithData:(SBLocalSaveModel *)data
@@ -57,11 +73,16 @@
         score_content = [NSString stringWithFormat:@"地址:%@\n%@", location, score_content];
     }
     _lbScroe.text = score_content;
-    
-    
-    
-    
 }
 
+-(BOOL) swipeTableCell:(MGSwipeTableCell*) cell canSwipe:(MGSwipeDirection) direction fromPoint:(CGPoint) point
+{
+    BOOL rt = YES;
+    if ([_delegateTap respondsToSelector:@selector(SBHistoryViewCellShouldSwipe:)])
+    {
+        rt = [_delegateTap performSelector:@selector(SBHistoryViewCellShouldSwipe:) withObject:self];
+    }
+    return rt;
+}
 
 @end
