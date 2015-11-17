@@ -201,7 +201,6 @@
             for (NSString *each_file_name in all_file_name)
             {
                 BOOL file_exist = [self checkFileInPlist:each_file_name];
-                NSLog(@"file - %@ - %d", each_file_name, file_exist);
                 if (file_exist == NO)
                 {
                     BOOL remove_success = [self deleteFile:each_file_name];
@@ -266,7 +265,6 @@
 {
     NSString *path = [NSString stringWithFormat:@"%@/%@", _savePath, fileName];
     BOOL rt = [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
-    NSLog(@"remove = %d", rt);
     return rt;
 }
 

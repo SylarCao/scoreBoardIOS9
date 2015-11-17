@@ -77,7 +77,7 @@
        didFailWithError:(NSError *)error
 {
     // 没有开设置就 跑到这里来
-    NSLog(@"fail");
+    NSLog(@"fail 定位失败");
     if (_block)
     {
         _block(NO, 0, 0);

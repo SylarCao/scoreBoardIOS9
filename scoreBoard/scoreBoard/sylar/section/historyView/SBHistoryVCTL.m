@@ -65,7 +65,6 @@ SBHistoryViewCellDelegate, MGSwipeTableCellDelegate>
     {
         // 指纹解锁
         [[SBTouchID share] authorizeWithTouchID:^{
-            NSLog(@"同步成功");
             _rightBtn.title = @"完成  ";
             _isEditing = YES;
             _editData = [_data mutableCopy];

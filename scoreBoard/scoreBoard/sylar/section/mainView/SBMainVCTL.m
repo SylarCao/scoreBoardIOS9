@@ -43,7 +43,6 @@ SBMainViewSaveDataViewDelegate>
     // 3d touch
     if (self.traitCollection.forceTouchCapability == UIForceTouchCapabilityAvailable)
     {
-        NSLog(@"3d touch available");
         [self registerForPreviewingWithDelegate:self sourceView:self.view];
     }
 }

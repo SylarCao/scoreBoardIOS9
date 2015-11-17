@@ -38,7 +38,6 @@
 
 - (void) gestureTripleTap
 {
-    NSLog(@"tap 3");
     if ([_delegate respondsToSelector:@selector(SBMainViewCell:didTripleTapIndex:)])
     {
         NSInteger index = [_lineNumberView.text integerValue];

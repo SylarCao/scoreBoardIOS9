@@ -68,8 +68,6 @@
 {
     NSDictionary *the_score = [[SBAddScoreTempModule share] getAddScore];
     
-    NSLog(@"add score = %@", the_score);
-    
     NSInteger total_score = 0;
     for (NSString *each_score in the_score.allValues)
     {
