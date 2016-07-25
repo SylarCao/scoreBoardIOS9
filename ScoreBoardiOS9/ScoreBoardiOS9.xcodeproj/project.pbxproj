@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		2C9EFBD51D46106400F1235A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EFBD41D46106400F1235A /* main.m */; };
 		2C9EFBD81D46106400F1235A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EFBD71D46106400F1235A /* AppDelegate.m */; };
-		2C9EFBDE1D46106400F1235A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EFBDC1D46106400F1235A /* Main.storyboard */; };
 		2C9EFBE01D46106400F1235A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EFBDF1D46106400F1235A /* Assets.xcassets */; };
-		2C9EFBE31D46106400F1235A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9EFBE11D46106400F1235A /* LaunchScreen.storyboard */; };
 		2C9EFD001D46108100F1235A /* SBCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EFBEE1D46108100F1235A /* SBCategory.m */; };
 		2C9EFD011D46108100F1235A /* SBDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EFBF01D46108100F1235A /* SBDPHelper.m */; };
 		2C9EFD021D46108100F1235A /* SBLocationHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C9EFBF21D46108100F1235A /* SBLocationHelper.m */; };
@@ -161,9 +159,7 @@
 		2C9EFBD41D46106400F1235A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C9EFBD61D46106400F1235A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2C9EFBD71D46106400F1235A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		2C9EFBDD1D46106400F1235A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C9EFBDF1D46106400F1235A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C9EFBE21D46106400F1235A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C9EFBE41D46106400F1235A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9EFBED1D46108100F1235A /* SBCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBCategory.h; sourceTree = "<group>"; };
 		2C9EFBEE1D46108100F1235A /* SBCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBCategory.m; sourceTree = "<group>"; };
@@ -435,9 +431,7 @@
 				2C9EFBEA1D46108100F1235A /* sylar */,
 				2C9EFBD61D46106400F1235A /* AppDelegate.h */,
 				2C9EFBD71D46106400F1235A /* AppDelegate.m */,
-				2C9EFBDC1D46106400F1235A /* Main.storyboard */,
 				2C9EFBDF1D46106400F1235A /* Assets.xcassets */,
-				2C9EFBE11D46106400F1235A /* LaunchScreen.storyboard */,
 				2C9EFBE41D46106400F1235A /* Info.plist */,
 				2C9EFBD31D46106400F1235A /* Supporting Files */,
 			);
@@ -1106,7 +1100,6 @@
 				2C9EFD101D46108100F1235A /* icon_40.png in Resources */,
 				2C9EFD151D46108100F1235A /* img_1_1.png in Resources */,
 				2C9EFD3D1D46108100F1235A /* SB3dTouchVCTL.xib in Resources */,
-				2C9EFBE31D46106400F1235A /* LaunchScreen.storyboard in Resources */,
 				2C9EFD231D46108100F1235A /* img_green_btn_HL.png in Resources */,
 				2C9EFD411D46108100F1235A /* SBAddPlayerVCTL.xib in Resources */,
 				2C9EFD1C1D46108100F1235A /* img_arrow_HL.png in Resources */,
@@ -1134,7 +1127,6 @@
 				2C9EFD221D46108100F1235A /* img_green_btn_disable@2x.png in Resources */,
 				2C9EFD361D46108100F1235A /* SBHistoryViewAutoSaveCell.xib in Resources */,
 				2C9EFD321D46108100F1235A /* SBAutoSaveVCTL.xib in Resources */,
-				2C9EFBDE1D46106400F1235A /* Main.storyboard in Resources */,
 				2C9EFD281D46108100F1235A /* icon2208.png in Resources */,
 				2C9EFD2B1D46108100F1235A /* s1.jpg in Resources */,
 				2C9EFD291D46108100F1235A /* icon960.png in Resources */,
@@ -1248,25 +1240,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		2C9EFBDC1D46106400F1235A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C9EFBDD1D46106400F1235A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2C9EFBE11D46106400F1235A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2C9EFBE21D46106400F1235A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2C9EFBE51D46106400F1235A /* Debug */ = {
@@ -1394,6 +1367,7 @@
 				2C9EFBE91D46106400F1235A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

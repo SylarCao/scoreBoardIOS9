@@ -2,10 +2,39 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>请求定位</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSExceptionDomains</key>
+		  <dict>
+		    <key>api.dianping.com</key>
+		    <dict>
+		      <!--Include to allow subdomains-->
+		      <key>NSIncludesSubdomains</key>
+		      <true/>
+		      <!--Include to allow HTTP requests-->
+		      <key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+		      <true/>
+		      <!--Include to specify minimum TLS version-->
+		      <key>NSTemporaryExceptionMinimumTLSVersion</key>
+		      <string>TLSv1.1</string>
+		    </dict>
+		 </dict>
+	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+	    <dict>
+	        <key>CFBundleURLSchemes</key>
+	        <array>
+	            <string>scoreBoard1</string>
+	        </array>
+	    </dict>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>我要请求位置</string>
+	<key>CFBundleDisplayName</key>
+	<string>计分iOS9</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -24,10 +53,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>请求定位</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -35,8 +64,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
