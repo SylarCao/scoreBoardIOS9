@@ -10,6 +10,7 @@
 #import "SBHomeVCTL.h"
 #import "SBLocalSaveHelper.h"
 #import "IQKeyboardManager.h"
+#import <Bugly/Bugly.h>
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 @interface AppDelegate ()
 
@@ -32,6 +33,14 @@
     
     // IQKeyboard
     [IQKeyboardManager sharedManager].enable = YES;
+    
+    
+    // bugly
+    BuglyConfig * config = [[BuglyConfig alloc] init];
+    config.debugMode = YES;
+    config.reportLogLevel = BuglyLogLevelWarn;
+    [Bugly startWithAppId:@"900042195" developmentDevice:YES config:config];
+    
     
     NSLog(@"home = %@", NSHomeDirectory());
     return YES;
